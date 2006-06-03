@@ -1,0 +1,13 @@
+<module>
+	<rawname>printextensions</rawname>
+	<name>Print Extensions</name>
+	<version>1.0.0</version>
+	<type>tool</type>
+	<category>Basic</category>
+	<menuitems>
+		<printextensions>Print Extensions</printextensions>
+	</menuitems>
+	<location>xx</location>
+	<info>http://aussievoip.com.au/wiki/freePBX-PrintExtensions</info>
+	<md5sum>xx</md5sum>
+</module>
