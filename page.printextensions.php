@@ -19,7 +19,7 @@ $dispnum = 'printextensions'; //used for switch on config.php
 </div>
 
 <?php 
-$gresults = extensions_allusers();
+$gresults = printextensions_allusers();
 ?>
 
 <div class="content">

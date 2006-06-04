@@ -1,7 +1,7 @@
 <?php 
 /* $Id:$ */
 
-function _allusers() {
+function printextensions_allusers() {
         global $db;
         $sql = "SELECT extension,name FROM users ORDER BY extension";
         $results = $db->getAll($sql);
