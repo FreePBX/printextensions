@@ -1,13 +1,13 @@
 <module>
 	<rawname>printextensions</rawname>
 	<name>Print Extensions</name>
-	<version>1.0.1</version>
+	<version>1.2.0</version>
 	<type>tool</type>
 	<category>Basic</category>
 	<menuitems>
 		<printextensions>Print Extensions</printextensions>
 	</menuitems>
-	<location>release/printextensions-1.0.1.tgz</location>
+	<location>release/printextensions-1.2.0.tgz</location>
 	<info>http://aussievoip.com.au/wiki/freePBX-PrintExtensions</info>
-	<md5sum>bfb13e6546a15ca7feed1fa0c9044690</md5sum>
+	<md5sum></md5sum>
 </module>
