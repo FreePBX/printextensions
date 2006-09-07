@@ -7,7 +7,7 @@
 	<menuitems>
 		<printextensions>Print Extensions</printextensions>
 	</menuitems>
-	<location>release/printextensions-1.2.0.tgz</location>
+	<location>release//2.2/printextensions-1.2.0.tgz</location>
 	<info>http://aussievoip.com.au/wiki/freePBX-PrintExtensions</info>
-	<md5sum>1a93708abdae07a65d015f8cfcef2f1c</md5sum>
+	<md5sum>f6e53144299a44ead0a673e5275ff602</md5sum>
 </module>
