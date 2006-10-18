@@ -67,7 +67,6 @@ echo "<tr><td colspan=3><hr noshade></td></tr>";
 
 if (isset($gresults)) {
         foreach ($gresults as $gresult) {
-                $defined = is_array($set_users) ? (in_array($gresult[0], $set_users) ? "(edit)" : "(add)") : "add";
 		echo "<tr width=250><td>$gresult[1]</td><td width=50 align=right>$gresult[0]</td><td width=100 
 align=right>$gresult[2]</td></tr>";
         }
