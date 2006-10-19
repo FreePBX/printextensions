@@ -3,7 +3,8 @@
 	<name>Print Extensions</name>
 	<version>1.2.0</version>
 	<type>tool</type>
-	<category>Basic</category>
+	<category>Third Party Addon</category>
+	<description>Creates a printable list of names and extension numbers</description>
 	<menuitems>
 		<printextensions>Print Extensions</printextensions>
 	</menuitems>
