@@ -1,7 +1,7 @@
 <module>
 	<rawname>printextensions</rawname>
 	<name>Print Extensions</name>
-	<version>1.3.2</version>
+	<version>2.4.0</version>
 	<type>tool</type>
 	<category>Third Party Addon</category>
 	<description>Creates a printable list of names and extension numbers</description>
@@ -9,9 +9,10 @@
 		<printextensions>Print Extensions</printextensions>
 	</menuitems>
 	<changelog>
+		*2.4.0* it translations, bump for 2.4
 		*1.3.2* Fixed uninizialized variable errors, bump for rc1
 		*1.3.1* Add he_IL translation
 	</changelog>
-	<location>release/2.3/printextensions-1.3.2.tgz</location>
-	<md5sum>e951d15435b421d6e43ae5bb133699a6</md5sum>
+	<location>release/2.4/printextensions-2.4.0.tgz</location>
+	<md5sum>b0fc25469485631af72ee499f965e7b0</md5sum>
 </module>
