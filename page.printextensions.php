@@ -16,30 +16,32 @@ $dispnum = 'printextensions'; //used for switch on config.php
 //isset($_REQUEST['action'])?$action = $_REQUEST['action']:$action='';
 
 
-$gresults = printextensions_allusers();
 ?>
 
 <div class="content">
 <?php
 if (!$quietmode) {
-	echo "<a href=\"config.php?type=tool&display=printextensions&quietmode=on\" target=\"_blank\">Printer Friendly</a>\n";
+	echo "<br /><a href=\"config.php?type=tool&display=printextensions&quietmode=on\" target=\"_blank\"><b>Printer Friendly</b></a>\n";
 }
 
 
 if (!$extdisplay) {
-	echo '<br><h2>'._("Company Directory").'</h2><table border="0" width="500">';
-	echo "<tr width=250><td align=left><b>Name</b></td><td width=\"50\" align=\"center\"><b>Extension</b></td><td width=\"200\" align=\"center\"><b>Assigned DID</b></td></tr>";
-	echo "<tr><td colspan=\"3\"><hr noshade /></td></tr>";
+	echo '<br><h2>'._("PBX Extension Layout").'</h2><table border="0" width="95%">';
+	echo "<tr width=90%><td align=left><b>Name</b></td><td width=\"10%\" align=\"center\"><b>Extension</b></td></tr>";
+	//echo "<tr><td colspan=\"3\"><hr noshade /></td></tr>";
 	
 }
 
-if (isset($gresults)) {
-		foreach ($gresults as $gresult) {
-			$defined = (isset($set_users) && is_array($set_users)) ? (in_array($gresult[0], $set_users) ? "(edit)" : "(add)") : "add";
-			echo "<tr width=\"250\"><td>".$gresult[1]."</td><td width=\"50\" align=\"right\">".$gresult[0]."</td><td width=\"200\" align=\"right\">".$gresult[2]."</td></tr>";
-		}
-}
+global $active_modules;
+$full_list = framework_check_extension_usage(true);
+foreach ($full_list as $key => $value) {
+	echo "<tr colspan=\"2\" width='100%'><td><br /><strong>".$active_modules[$key]['name']."</strong></td></tr>";
+	foreach ($value as $exten => $item) {
+		$description = explode(":",$item['description'],2);
+		echo "<tr width=\"90%\"><td>".(trim($description[1])==''?$exten:$description[1])."</td><td width=\"10%\" align=\"right\">".$exten."</td></tr>";
+	}
+};
+
 ?>
 </table>
-<p><a href="http://aussievoip.com.au/wiki/freePBX-PrintExtensions">Print Extensions v1.3</a></p>
 </div>
