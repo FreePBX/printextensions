@@ -14,6 +14,6 @@
 		*1.3.2* Fixed uninizialized variable errors, bump for rc1
 		*1.3.1* Add he_IL translation
 	</changelog>
-	<location>release/2.4/printextensions-2.4.0.tgz</location>
-	<md5sum>b0fc25469485631af72ee499f965e7b0</md5sum>
+	<location>release/2.5/printextensions-2.5.0.tgz</location>
+	<md5sum>c12c78f4ddbb136f6de274dda20750a8</md5sum>
 </module>
