@@ -27,7 +27,7 @@ if (!$quietmode) {
 
 if (!$extdisplay) {
 	echo '<br><h2>'._("PBX Extension Layout").'</h2><table border="0" width="95%">';
-	echo "<tr width=90%><td align=left><b>Name</b></td><td width=\"10%\" align=\"center\"><b>Extension</b></td></tr>";
+	echo "<tr width=90%><td align=left><b>Name</b></td><td width=\"10%\" align=\"right\"><b>Extension</b></td></tr>";
 	//echo "<tr><td colspan=\"3\"><hr noshade /></td></tr>";
 	
 }
