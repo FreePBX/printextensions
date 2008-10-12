@@ -21,10 +21,8 @@ $dispnum = 'printextensions'; //used for switch on config.php
 <div class="content">
 <?php
 if (!$quietmode) {
-	echo "<br /><a href=\"config.php?type=tool&display=printextensions&quietmode=on\" target=\"_blank\"><b>"._("Printer Friendly")."</b></a>\n";
+	echo "<br /><a href=\"config.php?type=tool&display=printextensions&quietmode=on\" target=\"_blank\"><b>"._("Printer Friendly Page")."</b></a>\n";
 }
-
-
 if (!$extdisplay) {
 	echo '<br><h2>'._("PBX Extension Layout").'</h2><table border="0" width="95%">';
 	echo "<tr width=90%><td align=left><b>"._("Name")."</b></td><td width=\"10%\" align=\"right\"><b>"._("Extension")."</b></td></tr>";
@@ -36,8 +34,8 @@ $full_list = framework_check_extension_usage(true);
 $featurecodes = featurecodes_getAllFeaturesDetailed();
 foreach ($full_list as $key => $value) {
 	$txtdom = $active_modules[$key]['rawname'];
-	if ($txtdom == 'core') textdomain('amp');
-	echo "<tr colspan=\"2\" width='100%'><td><br /><strong>".dgettext($txtdom,sprintf("%s",$active_modules[$key]['name']))."</strong></td></tr>";
+	if ($txtdom == 'core') $txtdom = 'amp';
+	echo "<tr colspan=\"2\" width='100%'><td><br /><strong>".sprintf("%s",dgettext($txtdom,$active_modules[$key]['name']))."</strong></td></tr>";
 	foreach ($value as $exten => $item) {
 		$description = explode(":",$item['description'],2);
 		// if from featurecodeadmin then skip as we deal with those later
@@ -49,6 +47,14 @@ foreach ($full_list as $key => $value) {
     }
 // Now, get all featurecodes. Code gracefully 'borrowed' from featurecodeadmin
 foreach($featurecodes as $item) {
+ $bind_domains = array();
+  if (isset($bind_domains[$item['modulename']]) || (extension_loaded('gettext') && is_dir("modules/".$item['modulename']."/i18n"))) {
+   if (!isset($bind_domains[$item['modulename']])) {
+    $bind_domains[$item['modulename']] = true;
+    bindtextdomain($item['modulename'],"modules/".$item['modulename']."/i18n");
+    bind_textdomain_codeset($item['modulename'], 'utf8');
+   }
+}
     $moduleena = ($item['moduleenabled'] == 1 ? true : false);
     $featureena = ($item['featureenabled'] == 1 ? true : false);
     $featurecodedefault = (isset($item['defaultcode']) ? $item['defaultcode'] : '');
@@ -56,10 +62,11 @@ foreach($featurecodes as $item) {
     $thiscode = ($featurecodecustom != '') ? $featurecodecustom : $featurecodedefault;
     $thismodena = ($moduleena != '') ? $featurecodecustom : $featurecodedefault;
     $txtdom = $item['modulename'];
-    // if it is from core, we get translations from amp
-    if ($txtdom == 'core') textdomain('amp');
+    // if core then get translations from amp
+    if ($txtdom == 'core') $txtdom = 'amp';
+    textdomain($txtdom);
     if ($featureena == true && $moduleena == true) 
-	 echo "<tr width=\"90%\"><td>".sprintf("%s",dgettext($item['modulename'],$item['featuredescription']))."</td><td width=\"10%\" align=\"right\">".$thiscode."</td></tr>";
+	 echo "<tr width=\"90%\"><td>".sprintf(dgettext($txtdom,$item['featuredescription']))."</td><td width=\"10%\" align=\"right\">".$thiscode."</td></tr>";
 };
 ?>
 </table>
