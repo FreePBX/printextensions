@@ -42,6 +42,11 @@ foreach ($full_list as $key => $value) {
 	$html_txt_arr[$sub_heading] .= "</table></div>";
 }
 
+ksort($html_txt_arr);
+if (!$quietmode) {
+	asort($module_select);
+}
+
 // Now, get all featurecodes.
 //
 $sub_heading_id =  'featurecodeadmin';
@@ -77,11 +82,9 @@ if (!$quietmode || isset($_REQUEST[$sub_heading_id])) {
 	}
 }
 $html_txt_arr[$sub_heading] .= "</table></div>";
-ksort($html_txt_arr);
 $html_txt .= implode("\n",$html_txt_arr);
 
 if (!$quietmode) {
-	asort($module_select);
 	$rnav_txt = '<div class="rnav"><form name="print" action="'.$_SERVER['PHP_SELF'].'?quietmode=on&'.$_SERVER['QUERY_STRING'].'" target=\"_blank\" method="post"><ul>';
 	foreach ($module_select as $id => $sub) {
 		$rnav_txt .= "<li><input type=\"checkbox\" value=\"$id\" name=\"$id\" id=\"$id\" class=\"disp_filter\" CHECKED /><label id=\"lab_$id\" name=\"lab_$id\" for=\"$id\">$sub</label></li>\n";
