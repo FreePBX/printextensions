@@ -17,8 +17,8 @@ global $active_modules;
 $html_txt = '<div class="content">';
 
 if (!$extdisplay) {
-	$html_txt .= '<br><h2>'._("FreePBX Extension Layout").'</h2><table border="0" width="75%">';
-	$html_txt .= "<tr width=90%><td align=left><b>"._("Name")."</b></td><td width=\"10%\" align=\"right\"><b>"._("Extension")."</b></td></tr></table>\n";
+	$html_txt .= '<br><h2>'._("FreePBX Extension Layout").'</h2>';
+
 }
 
 $full_list = framework_check_extension_usage(true);
@@ -33,8 +33,8 @@ foreach ($full_list as $key => $value) {
 	}
 	$sub_heading =  dgettext($txtdom,$active_modules[$key]['name']);
 	$module_select[$sub_heading_id] = $sub_heading;
-	$sub_heading .=  " "._("Extensions");
-	$html_txt_arr[$sub_heading] =  "<div class=\"$sub_heading_id\"><table border=\"0\" width=\"75%\"><tr colspan=\"2\" width='100%'><td><br /><strong>".sprintf("%s",$sub_heading)."</strong></td></tr>\n";
+	$textext = _("Extension");
+	$html_txt_arr[$sub_heading] =  "<div class=\"$sub_heading_id\"><table border=\"0\" width=\"75%\"><tr width='90%'><td><br><strong>".sprintf("%s",$sub_heading)."</strong></td><td width=\"10%\" align=\"right\"><br><strong>".$textext."</strong></td></tr>\n";
 	foreach ($value as $exten => $item) {
 		$description = explode(":",$item['description'],2);
 		$html_txt_arr[$sub_heading] .= "<tr width=\"90%\"><td>".(trim($description[1])==''?$exten:$description[1])."</td><td width=\"10%\" align=\"right\">".$exten."</td></tr>\n";
@@ -89,7 +89,7 @@ if (!$quietmode) {
 	foreach ($module_select as $id => $sub) {
 		$rnav_txt .= "<li><input type=\"checkbox\" value=\"$id\" name=\"$id\" id=\"$id\" class=\"disp_filter\" CHECKED /><label id=\"lab_$id\" name=\"lab_$id\" for=\"$id\">$sub</label></li>\n";
 	}
-	$rnav_txt .= "</ul><hr><div style=\"text-align:center\"><input type=\"submit\" value=\""._("Printer Friendly Page")."\" /></div>\n";
+	$rnav_txt .= "</ul><hr><div style=\"text-align:center\"><input type=\"submit\" value=\"".sprintf(dgettext('printextensions',_("Printer Friendly Page")))."\" /></div>\n";
 	echo $rnav_txt;
 ?>
 	<script language="javascript">
