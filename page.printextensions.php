@@ -18,7 +18,6 @@ $html_txt = '<div class="content">';
 
 if (!$extdisplay) {
 	$html_txt .= '<br><h2>'._("FreePBX Extension Layout").'</h2>';
-
 }
 
 $full_list = framework_check_extension_usage(true);
@@ -30,8 +29,11 @@ foreach ($full_list as $key => $value) {
 	}
 	if ($txtdom == 'core') {
 		$txtdom = 'amp';
+		$active_modules[$key]['name'] = 'Extensions';
+		$core_heading = $sub_heading =  dgettext($txtdom,$active_modules[$key]['name']);
+	} else {
+		$sub_heading =  dgettext($txtdom,$active_modules[$key]['name']);
 	}
-	$sub_heading =  dgettext($txtdom,$active_modules[$key]['name']);
 	$module_select[$sub_heading_id] = $sub_heading;
 	$textext = _("Extension");
 	$html_txt_arr[$sub_heading] =  "<div class=\"$sub_heading_id\"><table border=\"0\" width=\"75%\"><tr width='90%'><td><br><strong>".sprintf("%s",$sub_heading)."</strong></td><td width=\"10%\" align=\"right\"><br><strong>".$textext."</strong></td></tr>\n";
@@ -42,9 +44,24 @@ foreach ($full_list as $key => $value) {
 	$html_txt_arr[$sub_heading] .= "</table></div>";
 }
 
-ksort($html_txt_arr);
+function core_top($a, $b) {
+	global $core_heading;
+
+	if ($a == $core_heading) {
+		return -1;
+	} elseif ($b == $core_heading) {
+		return 1;
+	} elseif ($a != $b) {
+		return $a < $b ? -1 : 1;
+	} else {
+		return 0;
+	}
+}
+
+uksort($html_txt_arr, 'core_top');
 if (!$quietmode) {
-	asort($module_select);
+	//asort($module_select);
+	uasort($module_select, 'core_top');
 }
 
 // Now, get all featurecodes.
