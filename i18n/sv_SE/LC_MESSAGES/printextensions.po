@@ -22,7 +22,7 @@ msgid "Printer Friendly Page"
 msgstr "Utskriftsvänlig sida"
 
 #: page.printextensions.php:29
-msgid "PBX Extension Layout"
+msgid "FreePBX Extension Layout"
 msgstr "Anknytningar och funktionskoder"
 
 #: page.printextensions.php:30

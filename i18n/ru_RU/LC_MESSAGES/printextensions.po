@@ -21,7 +21,7 @@ msgid "Printer Friendly Page"
 msgstr "Страница к печати"
 
 #: page.printextensions.php:27
-msgid "PBX Extension Layout"
+msgid "FreePBX Extension Layout"
 msgstr "Список внутренних абонентов"
 
 #: page.printextensions.php:28

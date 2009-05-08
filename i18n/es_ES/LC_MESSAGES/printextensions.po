@@ -18,7 +18,7 @@ msgid "Printer Friendly Page"
 msgstr "Versión para imprimir"
 
 #: page.printextensions.php:27
-msgid "PBX Extension Layout"
+msgid "FreePBX Extension Layout"
 msgstr "Distribución de extensiones de la centralita"
 
 #: page.printextensions.php:28

@@ -23,7 +23,7 @@ msgid "Printer Friendly Page"
 msgstr "Подходяща за Принтиране Страница"
 
 #: page.printextensions.php:27
-msgid "PBX Extension Layout"
+msgid "FreePBX Extension Layout"
 msgstr "План на Вътрешните Линии на Телефонната Централа"
 
 #: page.printextensions.php:28
