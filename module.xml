@@ -1,7 +1,9 @@
 <module>
 	<rawname>printextensions</rawname>
 	<name>Print Extensions</name>
-	<version>2.6.0.2</version>
+	<version>2.6.0.3</version>
+	<publisher>Bandwidth.com</publisher>
+	<license>GPLv2</license>
 	<type>tool</type>
 	<category>System Administration</category>
 	<description>Creates a printable list of extension numbers used throughout the system from all modules that provide an internal callable number</description>
@@ -9,6 +11,7 @@
 		<printextensions>Print Extensions</printextensions>
 	</menuitems>
 	<changelog>
+		*2.6.0.3* misc
 		*2.6.0.2* replace Core with Extensions re #3662, sort Extensions first always
 		*2.6.0.1* minor tweaks, localizations
 		*2.6.0.0* add rnav checkboxes to collapse/expand extension sections
