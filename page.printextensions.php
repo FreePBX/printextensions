@@ -68,7 +68,7 @@ if (!$quietmode) {
 //
 $sub_heading_id =  'featurecodeadmin';
 if (!$quietmode || isset($_REQUEST[$sub_heading_id])) {
-	$featurecodes = featurecodes_getAllFeaturesDetailed();
+	$featurecodes = featurecodes_getAllFeaturesDetailed(false);
 	$sub_heading =  dgettext($txtdom,$active_modules['featurecodeadmin']['name']);
 	$module_select[$sub_heading_id] = $sub_heading;
 	$html_txt_arr[$sub_heading] =  "<div class=\"$sub_heading_id\"><table border=\"0\" width=\"75%\"><tr colspan=\"2\" width='100%'><td><br /><strong>".sprintf("%s",$sub_heading)."</strong></td></tr>\n";
