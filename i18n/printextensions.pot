@@ -1,14 +1,26 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is part of FreePBX.
 #
-#, fuzzy
+#    FreePBX is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 2 of the License, or
+#    (at your option) any later version.
+#
+#    FreePBX is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with FreePBX.  If not, see <http://www.gnu.org/licenses/>.
+#
+# FreePBX language template for printextensions
+# Copyright (C) 2008, 2009, 2010 Bandwith.com
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-06 12:26+0200\n"
+"POT-Creation-Date: 2010-02-18 22:37+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,22 +28,45 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: page.printextensions.php:24
-msgid "Printer Friendly Page"
-msgstr ""
-
-#: page.printextensions.php:27
+#: printextensions/page.printextensions.php:20
 msgid "FreePBX Extension Layout"
 msgstr ""
 
-#: page.printextensions.php:28
-msgid "Name"
+#: printextensions/page.printextensions.php:33
+#: printextensions/page.printextensions.php:35
+#: printextensions/page.printextensions.php:72
+msgid "name"
 msgstr ""
 
-#: page.printextensions.php:28
+#: printextensions/page.printextensions.php:38
 msgid "Extension"
 msgstr ""
 
-#: module.xml
+#: printextensions/page.printextensions.php:72
+msgid "featurecodeadmin"
+msgstr ""
+
+#: printextensions/page.printextensions.php:97
+#, php-format
+msgid "featuredescription"
+msgstr ""
+
+#: printextensions/page.printextensions.php:109
+#, php-format
+msgid "Printer Friendly Page"
+msgstr ""
+
+#: printextensions/printextensions.i18n.php:5
+#: printextensions/printextensions.i18n.php:11
 msgid "Print Extensions"
+msgstr ""
+
+#: printextensions/printextensions.i18n.php:7
+msgid "System Administration"
+msgstr ""
+
+#: printextensions/printextensions.i18n.php:9
+msgid ""
+"Creates a printable list of extension numbers used throughout the system "
+"from all modules that provide an internal callable number"
 msgstr ""
