@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-02-27 13:45+0100\n"
+"POT-Creation-Date: 2010-02-27 17:34+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,44 +28,32 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: printextensions/page.printextensions.php:20
 msgid "FreePBX Extension Layout"
 msgstr ""
 
-#: printextensions/page.printextensions.php:33
-#: printextensions/page.printextensions.php:35
-#: printextensions/page.printextensions.php:72
 msgid "name"
 msgstr ""
 
-#: printextensions/page.printextensions.php:38
 msgid "Extension"
 msgstr ""
 
-#: printextensions/page.printextensions.php:72
 msgid "featurecodeadmin"
 msgstr ""
 
-#: printextensions/page.printextensions.php:97
 #, php-format
 msgid "featuredescription"
 msgstr ""
 
-#: printextensions/page.printextensions.php:109
 #, php-format
 msgid "Printer Friendly Page"
 msgstr ""
 
-#: printextensions/printextensions.i18n.php:5
-#: printextensions/printextensions.i18n.php:11
 msgid "Print Extensions"
 msgstr ""
 
-#: printextensions/printextensions.i18n.php:7
 msgid "System Administration"
 msgstr ""
 
-#: printextensions/printextensions.i18n.php:9
 msgid ""
 "Creates a printable list of extension numbers used throughout the system "
 "from all modules that provide an internal callable number"
