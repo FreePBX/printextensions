@@ -39,12 +39,14 @@ foreach ($full_list as $key => $value) {
 	$html_txt_arr[$sub_heading] =  "<div class=\"$sub_heading_id\"><table border=\"0\" width=\"75%\"><tr width='90%'><td><br><strong>".sprintf("%s",$sub_heading)."</strong></td><td width=\"10%\" align=\"right\"><br><strong>".$textext."</strong></td></tr>\n";
 	foreach ($value as $exten => $item) {
 		$description = explode(":",$item['description'],2);
+    $label_desc = trim($description[1])==''?$exten:$description[1];
     if ($quietmode) {
-      $label = $exten;
+      $label_exten = $exten;
     } else {
-      $label = "<a href='".$item['edit_url']."'>$exten</a>";
+      $label_exten = "<a href='".$item['edit_url']."'>$exten</a>";
+      $label_desc = "<a href='".$item['edit_url']."'>$label_desc</a>";
     }
-		$html_txt_arr[$sub_heading] .= "<tr width=\"90%\"><td>".(trim($description[1])==''?$exten:$description[1])."</td><td width=\"10%\" align=\"right\">".$label."</td></tr>\n";
+		$html_txt_arr[$sub_heading] .= "<tr width=\"90%\"><td>$label_desc</td><td width=\"10%\" align=\"right\">".$label_exten."</td></tr>\n";
 	}
 	$html_txt_arr[$sub_heading] .= "</table></div>";
 }
@@ -99,10 +101,12 @@ if (!$quietmode || isset($_REQUEST[$sub_heading_id])) {
 		}
 		textdomain($txtdom);
 		if ($featureena && $moduleena) {
+      $label_desc = sprintf(dgettext($txtdom,$item['featuredescription']));
       if (!$quietmode) {
         $thiscode = "<a href='config.php?type=setup&display=featurecodeadmin'>$thiscode</a>";
+        $label_desc = "<a href='config.php?type=setup&display=featurecodeadmin'>$label_desc</a>";
       }
-			$html_txt_arr[$sub_heading] .= "<tr width=\"90%\"><td>".sprintf(dgettext($txtdom,$item['featuredescription']))."</td><td width=\"10%\" align=\"right\">".$thiscode."</td></tr>\n";
+			$html_txt_arr[$sub_heading] .= "<tr width=\"90%\"><td>$label_desc</td><td width=\"10%\" align=\"right\">".$thiscode."</td></tr>\n";
 		}
 	}
 }
