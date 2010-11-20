@@ -39,7 +39,12 @@ foreach ($full_list as $key => $value) {
 	$html_txt_arr[$sub_heading] =  "<div class=\"$sub_heading_id\"><table border=\"0\" width=\"75%\"><tr width='90%'><td><br><strong>".sprintf("%s",$sub_heading)."</strong></td><td width=\"10%\" align=\"right\"><br><strong>".$textext."</strong></td></tr>\n";
 	foreach ($value as $exten => $item) {
 		$description = explode(":",$item['description'],2);
-		$html_txt_arr[$sub_heading] .= "<tr width=\"90%\"><td>".(trim($description[1])==''?$exten:$description[1])."</td><td width=\"10%\" align=\"right\">".$exten."</td></tr>\n";
+    if ($quietmode) {
+      $label = $exten;
+    } else {
+      $label = "<a href='".$item['edit_url']."'>$exten</a>";
+    }
+		$html_txt_arr[$sub_heading] .= "<tr width=\"90%\"><td>".(trim($description[1])==''?$exten:$description[1])."</td><td width=\"10%\" align=\"right\">".$label."</td></tr>\n";
 	}
 	$html_txt_arr[$sub_heading] .= "</table></div>";
 }
@@ -94,6 +99,9 @@ if (!$quietmode || isset($_REQUEST[$sub_heading_id])) {
 		}
 		textdomain($txtdom);
 		if ($featureena && $moduleena) {
+      if (!$quietmode) {
+        $thiscode = "<a href='config.php?type=setup&display=featurecodeadmin'>$thiscode</a>";
+      }
 			$html_txt_arr[$sub_heading] .= "<tr width=\"90%\"><td>".sprintf(dgettext($txtdom,$item['featuredescription']))."</td><td width=\"10%\" align=\"right\">".$thiscode."</td></tr>\n";
 		}
 	}
