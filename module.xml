@@ -1,5 +1,6 @@
 <module>
 	<rawname>printextensions</rawname>
+	<repo>standard</repo>
 	<name>Print Extensions</name>
 	<version>2.9.0.0</version>
 	<publisher>Bandwidth.com</publisher>
