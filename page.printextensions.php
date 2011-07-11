@@ -38,7 +38,7 @@ if (!$quietmode) {
 				<span><?php echo _("You can narrow the list of extensions based on a search criteria. If you search for an exact extension number the page will redirect to the edit page for the given number. You can also do a bounded or unbounded regex search. The bounded search simply encloses you search criteria between a '^' and '$' where as an unbounded one is completely free form. All normal regex patterns are acceptable in your search. So for example, a bounded search of 20\d\d would search for all extensions of the form 20XX. The resulting lists of numbers all contain links to go directly to the edit pages and the Printer Friendly page will reflect the filtered list of numbers.") ?></span>
 				</a></td>
 				<td class="type">
-					<input name="search_pattern" type="text" size="30" 
+					<input name="search_pattern" type="search" size="30" 
 						value="<?php echo htmlspecialchars(isset($_POST['search_pattern']) ? $_POST['search_pattern'] : '');?>" 
 						tabindex="<?php echo ++$tabindex;?>">
 				</td>
