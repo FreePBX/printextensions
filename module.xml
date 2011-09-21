@@ -2,7 +2,7 @@
 	<rawname>printextensions</rawname>
 	<repo>standard</repo>
 	<name>Print Extensions</name>
-	<version>2.9.0.1</version>
+	<version>2.10.0.0</version>
 	<publisher>Bandwidth.com</publisher>
 	<license>GPLv2</license>
 	<category>Reports</category>
@@ -11,9 +11,10 @@
 		<printextensions>Print Extensions</printextensions>
 	</menuitems>
 	<changelog>
+		*2.10.0.0* new version changes
 		*2.9.0.1* #4650
 		*2.9.0.0* #4647 make exten numbers a link to edit the extension
 	</changelog>
-	<location>release/2.9/printextensions-2.9.0.1.tgz</location>
-	<md5sum>bab2d120698f395dcd7e2828dd4673ce</md5sum>
+	<location>release/2.10/printextensions-2.10.0.0.tgz</location>
+	<md5sum>f84c9fd6fb28a3a8370ac62e228b85db</md5sum>
 </module>
