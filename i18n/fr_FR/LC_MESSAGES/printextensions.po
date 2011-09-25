@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-06 12:26+0200\n"
+"POT-Creation-Date: 2011-09-23 09:52+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Jouniaux <c.jouniaux@techtelecom.fr>\n"
 "Language-Team: \n"
@@ -10,23 +10,63 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: page.printextensions.php:24
-msgid "Printer Friendly Page"
-msgstr "Affichage pour impression"
+msgid "Search:"
+msgstr ""
 
-#: page.printextensions.php:27
+msgid ""
+"You can narrow the list of extensions based on a search criteria. If you "
+"search for an exact extension number the page will redirect to the edit page "
+"for the given number. You can also do a bounded or unbounded regex search. "
+"The bounded search simply encloses you search criteria between a '^' and '$' "
+"where as an unbounded one is completely free form. All normal regex patterns "
+"are acceptable in your search. So for example, a bounded search of 20\\d\\d "
+"would search for all extensions of the form 20XX. The resulting lists of "
+"numbers all contain links to go directly to the edit pages and the Printer "
+"Friendly page will reflect the filtered list of numbers."
+msgstr ""
+
+msgid "Search Exact Exten"
+msgstr ""
+
+msgid "Search Bounded Regex"
+msgstr ""
+
+msgid "Search Unbounded Regex"
+msgstr ""
+
 msgid "FreePBX Extension Layout"
 msgstr "Liste des extensions"
 
-#: page.printextensions.php:28
-msgid "Name"
-msgstr "Nom"
+msgid "No Matches for the Requested Search"
+msgstr ""
 
-#: page.printextensions.php:28
+msgid "name"
+msgstr ""
+
 msgid "Extension"
 msgstr "Extension"
 
-#: module.xml
+msgid "featurecodeadmin"
+msgstr ""
+
+#, php-format
+msgid "featuredescription"
+msgstr ""
+
+#, php-format
+msgid "Printer Friendly Page"
+msgstr "Affichage pour impression"
+
 msgid "Print Extensions"
 msgstr "Imprimer extensions"
 
+msgid "Reports"
+msgstr ""
+
+msgid ""
+"Creates a printable list of extension numbers used throughout the system "
+"from all modules that provide an internal callable number"
+msgstr ""
+
+#~ msgid "Name"
+#~ msgstr "Nom"
