@@ -119,16 +119,15 @@ foreach ($full_list as $key => $value) {
 		continue; // featurecodes are fetched below
 	}
 	if ($key == 'did') {
-		$txtdom = 'amp';
 		$active_modules[$key]['name'] = 'Inbound Routes';
-		$core_heading = $sub_heading =  dgettext($txtdom, $active_modules[$key]['name']);
+		$core_heading = $sub_heading =  modgettext::_($active_modules[$key]['name'], $txtdom);
 	} elseif ($txtdom == 'core') {
-		$txtdom = 'amp';
 		$active_modules[$key]['name'] = 'Extensions';
-		$core_heading = $sub_heading =  dgettext($txtdom, $active_modules[$key]['name']);
+		$core_heading = $sub_heading =  modgettext::_($active_modules[$key]['name'], $txtdom);
 	} else {
-		$sub_heading =  dgettext($txtdom, $active_modules[$key]['name']);
+		$sub_heading =  modgettext::_($active_modules[$key]['name'], $txtdom);
 	}
+
 	$module_select[$sub_heading_id] = $sub_heading;
 	$textext = _("Extension");
 	$html_txt_arr[$sub_heading] =  "<div class=\"$sub_heading_id\"><table border=\"0\" width=\"75%\"><tr width='90%'><td><br><strong>".sprintf("%s",$sub_heading)."</strong></td><td width=\"10%\" align=\"right\"><br><strong>".$textext."</strong></td></tr>\n";
@@ -173,19 +172,10 @@ if (!$quietmode) {
 $sub_heading_id =  'featurecodeadmin';
 if ((!$quietmode || isset($_REQUEST[$sub_heading_id])) && isset($full_list['featurecodeadmin'])) {
 	$featurecodes = featurecodes_getAllFeaturesDetailed(false);
-	$sub_heading =  dgettext($txtdom,$active_modules['featurecodeadmin']['name']);
+	$sub_heading =  modgettext::_($active_modules['featurecodeadmin']['name'], $txtdom);
 	$module_select[$sub_heading_id] = $sub_heading;
 	$html_txt_arr[$sub_heading] =  "<div class=\"$sub_heading_id\"><table border=\"0\" width=\"75%\"><tr colspan=\"2\" width='100%'><td><br /><strong>".sprintf("%s",$sub_heading)."</strong></td></tr>\n";
 	foreach ($featurecodes as $item) {
-		$bind_domains = array();
-		if (isset($bind_domains[$item['modulename']]) 
-			|| (extension_loaded('gettext') && 	is_dir("modules/".$item['modulename']."/i18n"))) {
-			if (!isset($bind_domains[$item['modulename']])) {
-				$bind_domains[$item['modulename']] = true;
-				bindtextdomain($item['modulename'],"modules/".$item['modulename']."/i18n");
-				bind_textdomain_codeset($item['modulename'], 'utf8');
-			}
-		}
 		$moduleena = ($item['moduleenabled'] == 1 ? true : false);
 		$featureena = ($item['featureenabled'] == 1 ? true : false);
 		$featurecodedefault = (isset($item['defaultcode']) ? $item['defaultcode'] : '');
@@ -199,13 +189,9 @@ if ((!$quietmode || isset($_REQUEST[$sub_heading_id])) && isset($full_list['feat
 		}
 
 		$txtdom = $item['modulename'];
-		// if core then get translations from amp
-		if ($txtdom == 'core') {
-			$txtdom = 'amp';
-		}
-		textdomain($txtdom);
+		modgettext::textdomain($txtdom);
 		if ($featureena && $moduleena) {
-			$label_desc = sprintf(dgettext($txtdom,$item['featuredescription']));
+			$label_desc = sprintf(modgettext::_($item['featuredescription'],$txtdom));
 			if (!$quietmode) {
 				$thiscode = "<a href='config.php?type=setup&display=featurecodeadmin'>$thiscode</a>";
 				$label_desc = "<a href='config.php?type=setup&display=featurecodeadmin'>$label_desc</a>";
@@ -238,7 +224,7 @@ if (!$quietmode && ($search_pattern == '' || $found > 0)) {
 			if (is_array($module_select)) foreach ($module_select as $id => $sub) {
 				$rnav_txt .= "<li><input type=\"checkbox\" value=\"$id\" name=\"$id\" id=\"$id\" class=\"disp_filter\" CHECKED /><label id=\"lab_$id\" name=\"lab_$id\" for=\"$id\">$sub</label></li>\n";
 			}
-			$rnav_txt .= "</ul><hr><div style=\"text-align:center\"><input type=\"submit\" value=\"".sprintf(dgettext('printextensions',_("Printer Friendly Page")))."\" /></div>\n";
+			$rnav_txt .= "</ul><hr><div style=\"text-align:center\"><input type=\"submit\" value=\"".sprintf(modgettext::_("Printer Friendly Page", $dispnum))."\" /></div>\n";
 			echo $rnav_txt;
 			?>
 			<script language="javascript">
