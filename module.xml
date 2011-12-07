@@ -16,6 +16,6 @@
 		*2.9.0.1* #4650
 		*2.9.0.0* #4647 make exten numbers a link to edit the extension
 	</changelog>
-	<location>release/2.10/printextensions-2.10.0.0.tgz</location>
-	<md5sum>f84c9fd6fb28a3a8370ac62e228b85db</md5sum>
+	<location>release/2.10/printextensions-2.10.0.1.tgz</location>
+	<md5sum>470fd6195da0c02b38cc98c80925c5d4</md5sum>
 </module>
