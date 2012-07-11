@@ -80,6 +80,8 @@ if (function_exists('core_did_list')) {
 									'edit_url'		=> 'config.php?type=setup&display=did&extdisplay=' . $exten
 										);
 	}
+	// fake out the code below so ids and classes get set properly
+	$active_modules['did']['rawname'] = 'did';
 }
 
 if ($search_pattern != '') {
@@ -114,6 +116,11 @@ if ($search_pattern != '' && $found == 0) {
 foreach ($full_list as $key => $value) {
 
 	$sub_heading_id = $txtdom = $active_modules[$key]['rawname'];
+
+	// did domain doesn't really exist, faked out above, make it core
+	if ($txtdom == 'did') {
+		$txtdom = 'core';
+	}
 	
 	if (isset($active_modules[$key]['rawname']) && $active_modules[$key]['rawname'] == 'featurecodeadmin' 
 		|| ($quietmode && !isset($_REQUEST[$sub_heading_id]))) {
