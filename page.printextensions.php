@@ -70,18 +70,28 @@ $full_list = framework_check_extension_usage(true);
 
 //add did's
 if (function_exists('core_did_list')) {
+	$destination = array();
 	$dids_list = core_did_list();
 	foreach ($dids_list as $dl) {
-		$exten = ($dl['cidnum'] ? $dl['cidnum'] : 'any') . '/' . ($dl['extension'] ? $dl['extension'] : 'any');
-		$discription = $dl['description'] ? $dl['description'] : $exten;
+		$exten = ($dl['extension'] ? $dl['extension'] : '') . ($dl['cidnum'] != '' ? '/' . $dl['cidnum'] : '') ;
+		if ($exten == '') {
+			$exten = 'Catchall';
+		}
+		if ($dl['destination']) {
+			$destination[$exten] = $dl['destination'];
+		}
+		$description = $dl['description'] ? $dl['description'] : $exten;
 		$full_list['did'][$exten] = array(
-									'description'	=> $discription,
+									'description'	=> $description,
 									'status'		=> 'INUSE',
-									'edit_url'		=> 'config.php?type=setup&display=did&extdisplay=' . $exten
+									'edit_url'		=> 'config.php?type=setup&display=did&extdisplay=' . ($exten == 'Catchall' ? '/' : $exten),
 										);
 	}
 	// fake out the code below so ids and classes get set properly
 	$active_modules['did']['rawname'] = 'did';
+	if (!empty($destination)) {
+		$dusage = framework_identify_destinations($destination);
+	}
 }
 
 if ($search_pattern != '') {
@@ -137,18 +147,33 @@ foreach ($full_list as $key => $value) {
 	}
 
 	$module_select[$sub_heading_id] = $sub_heading;
-	$textext = _("Extension");
+	$textext = $key != 'did' ? _("Extension") : _("Destination");
 	$html_txt_arr[$sub_heading] =  "<div class=\"$sub_heading_id\"><table border=\"0\" width=\"75%\"><tr width='90%'><td><br><strong>".sprintf("%s",$sub_heading)."</strong></td><td width=\"10%\" align=\"right\"><br><strong>".$textext."</strong></td></tr>\n";
 	foreach ($value as $exten => $item) {
 		$description = explode(":",$item['description'],2);
-		$label_desc = trim($description[1])==''?$exten:$description[1];
-		if ($quietmode) {
-			$label_exten = $exten;
+		$label_desc = count($description) <= 1 || trim($description[1]) == '' ? $exten : $description[1];
+
+		if ($key == 'did') {
+			foreach ($dusage[$destination[$exten]] as $mod => $parts) {
+				$description = $parts['description'];
+				$edit_url = $parts['edit_url'];
+				break;
+			}
+			if ($quietmode) {
+				$label_exten = $description;
+			} else {
+				$label_exten = "<a href='".$edit_url."'>$description</a>";
+				$label_desc = "<a href='".$item['edit_url']."'>$exten</a>";
+			}
 		} else {
-			$label_exten = "<a href='".$item['edit_url']."'>$exten</a>";
-			$label_desc = "<a href='".$item['edit_url']."'>$label_desc</a>";
+			if ($quietmode) {
+				$label_exten = $exten;
+			} else {
+				$label_exten = "<a href='".$item['edit_url']."'>$exten</a>";
+				$label_desc = "<a href='".$item['edit_url']."'>$label_desc</a>";
+			}
 		}
-		$html_txt_arr[$sub_heading] .= "<tr width=\"90%\"><td>$label_desc</td><td width=\"10%\" align=\"right\">".$label_exten."</td></tr>\n";
+		$html_txt_arr[$sub_heading] .= "<tr width=\"65%\"><td>$label_desc</td><td width=\"35%\" align=\"right\">".$label_exten."</td></tr>\n";
 	}
 	$html_txt_arr[$sub_heading] .= "</table></div>";
 }
