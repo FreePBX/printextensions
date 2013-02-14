@@ -81,7 +81,7 @@ if (function_exists('core_did_list')) {
 			$destination[$exten] = $dl['destination'];
 		}
 		$description = $dl['description'] ? $dl['description'] : $exten;
-		$full_list['did'][$exten] = array(
+		$full_list['did'][" $exten"] = array(
 									'description'	=> $description,
 									'status'		=> 'INUSE',
 									'edit_url'		=> 'config.php?type=setup&display=did&extdisplay=' . ($exten == 'Catchall' ? '/' : $exten),
@@ -154,7 +154,7 @@ foreach ($full_list as $key => $value) {
 		$label_desc = count($description) <= 1 || trim($description[1]) == '' ? $exten : $description[1];
 
 		if ($key == 'did') {
-			foreach ($dusage[$destination[$exten]] as $mod => $parts) {
+			foreach ($dusage[$destination[trim($exten)]] as $mod => $parts) {
 				$description = $parts['description'];
 				$edit_url = $parts['edit_url'];
 				break;
