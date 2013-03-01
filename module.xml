@@ -2,7 +2,7 @@
 	<rawname>printextensions</rawname>
 	<repo>standard</repo>
 	<name>Print Extensions</name>
-	<version>2.10.0.4</version>
+	<version>2.11.0.0</version>
 	<publisher>Bandwidth.com</publisher>
 	<license>GPLv2</license>
 	<category>Reports</category>
@@ -11,6 +11,7 @@
 		<printextensions>Print Extensions</printextensions>
 	</menuitems>
 	<changelog>
+		*2.11.0.0* bump to 2.11 and workaround for PHP bug that makes large numbers negative
 		*2.10.0.4* #5934
 		*2.10.0.3* #5787
 		*2.10.0.2* #5478 
