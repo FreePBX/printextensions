@@ -19,4 +19,4 @@
 	</changelog>
 	<location>release/2.10/printextensions-2.10.0.2.tgz</location>
 	<md5sum>681a91a427bc5987e5311bb528e85887</md5sum>
-</module>
+<supported><version>2.10</version></supported></module>
