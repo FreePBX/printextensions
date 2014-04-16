@@ -2,15 +2,17 @@
   <rawname>printextensions</rawname>
   <repo>standard</repo>
   <name>Print Extensions</name>
-  <version>2.11.0.0</version>
-  <publisher>Bandwidth.com</publisher>
-  <license>GPLv2</license>
+  <version>2.11.0.1</version>
+	<publisher>Schmooze Com Inc</publisher>
+	<license>GPLv3+</license>
+	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
   <category>Reports</category>
   <description>Creates a printable list of extension numbers used throughout the system from all modules that provide an internal callable number</description>
   <menuitems>
     <printextensions>Print Extensions</printextensions>
   </menuitems>
   <changelog>
+  		*2.11.0.1* Include license file
 		*2.11.0.0* bump to 2.11 and workaround for PHP bug that makes large numbers negative
 		*2.10.0.4* #5934
 		*2.10.0.3* #5787
