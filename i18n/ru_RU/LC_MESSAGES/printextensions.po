@@ -6,17 +6,52 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-30 00:04+0400\n"
+"POT-Creation-Date: 2015-02-11 18:05-0500\n"
 "PO-Revision-Date: 2008-10-13 15:07+0100\n"
 "Last-Translator: Alexander Kozyrev\n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: /usr/src/freepbx/printextensions/page.printextensions.php:139
+msgid "Destination"
+msgstr "Назначение"
+
+#: /usr/src/freepbx/printextensions/page.printextensions.php:139
+msgid "Extension"
+msgstr "Номер"
+
+#: /usr/src/freepbx/printextensions/page.printextensions.php:55
+msgid "FreePBX Extension Layout"
+msgstr "Список внутренних абонентов"
+
+#: /usr/src/freepbx/printextensions/page.printextensions.php:111
+msgid "No Matches for the Requested Search"
+msgstr "По данному запросу, ничего не найдено."
+
+#: /usr/src/freepbx/printextensions/page.printextensions.php:249
+#, php-format
+msgid "Printer Friendly Page"
+msgstr "Страница к печати"
+
+#: /usr/src/freepbx/printextensions/page.printextensions.php:40
+msgid "Search Bounded Regex"
+msgstr "Поиск по ограниченным регулярным выражениям"
+
+#: /usr/src/freepbx/printextensions/page.printextensions.php:38
+msgid "Search Exact Exten"
+msgstr "Искать конкретный номер"
+
+#: /usr/src/freepbx/printextensions/page.printextensions.php:42
+msgid "Search Unbounded Regex"
+msgstr "Поиск по неограниченным регулярным выражениям"
+
+#: /usr/src/freepbx/printextensions/page.printextensions.php:27
 msgid "Search:"
 msgstr "Поиск:"
 
+#: /usr/src/freepbx/printextensions/page.printextensions.php:28
 msgid ""
 "You can narrow the list of extensions based on a search criteria. If you "
 "search for an exact extension number the page will redirect to the edit page "
@@ -29,52 +64,28 @@ msgid ""
 "Friendly page will reflect the filtered list of numbers."
 msgstr ""
 "Можно получить выборочный лист внутренних номеров, фильтруя по критериям "
-"запроса. Если задан точный внутренний номер, то результат поиска будет автоматически "
-"перенаправлен на страницу настроек этого номера для редакции. Также при выставлении "
-"критериев поиска можно использовать регулярные выражения. В общем случае критерий "
-"запроса при помощи регулярных выражений должен содержать данные между '^' и '$', где "
-"допускаются различные свободные формы. Например, поиск по критерию 20\\d\\d найдёт все "
-"внутренние Caller IDа 20ХХ. Результатом поиска будет список внутренних номеров, "
-"каждый из которых будет иметь линк на сруницу редактирования настроек этого номера, "
-"а также линк на страницу этого же результата, оптимизированную для принтера."
+"запроса. Если задан точный внутренний номер, то результат поиска будет "
+"автоматически перенаправлен на страницу настроек этого номера для редакции. "
+"Также при выставлении критериев поиска можно использовать регулярные "
+"выражения. В общем случае критерий запроса при помощи регулярных выражений "
+"должен содержать данные между '^' и '$', где допускаются различные свободные "
+"формы. Например, поиск по критерию 20\\d\\d найдёт все внутренние Caller IDа "
+"20ХХ. Результатом поиска будет список внутренних номеров, каждый из которых "
+"будет иметь линк на сруницу редактирования настроек этого номера, а также "
+"линк на страницу этого же результата, оптимизированную для принтера."
 
-msgid "Search Exact Exten"
-msgstr "Искать конкретный номер"
+#~ msgid "Print Extensions"
+#~ msgstr "Распечатать список внутренних номеров"
 
-msgid "Search Bounded Regex"
-msgstr "Поиск по ограниченным регулярным выражениям"
+#~ msgid "Reports"
+#~ msgstr "Отчеты"
 
-msgid "Search Unbounded Regex"
-msgstr "Поиск по неограниченным регулярным выражениям"
-
-msgid "FreePBX Extension Layout"
-msgstr "Список внутренних абонентов"
-
-msgid "No Matches for the Requested Search"
-msgstr "По данному запросу, ничего не найдено."
-
-msgid "Extension"
-msgstr "Номер"
-
-msgid "Destination"
-msgstr "Назначение"
-
-#, php-format
-msgid "Printer Friendly Page"
-msgstr "Страница к печати"
-
-msgid "Print Extensions"
-msgstr "Распечатать список внутренних номеров"
-
-msgid "Reports"
-msgstr "Отчеты"
-
-msgid ""
-"Creates a printable list of extension numbers used throughout the system "
-"from all modules that provide an internal callable number"
-msgstr ""
-"Создает лист внутренних номеров пригодный для печати, используя номера "
-"из всех модулей в системе, на которые есть возможность позвонить "
+#~ msgid ""
+#~ "Creates a printable list of extension numbers used throughout the system "
+#~ "from all modules that provide an internal callable number"
+#~ msgstr ""
+#~ "Создает лист внутренних номеров пригодный для печати, используя номера из "
+#~ "всех модулей в системе, на которые есть возможность позвонить "
 
 #~ msgid "Name"
 #~ msgstr "Имя"

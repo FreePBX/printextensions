@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-23 09:52+0000\n"
+"POT-Creation-Date: 2015-02-11 18:05-0500\n"
 "PO-Revision-Date: 2008-11-07 12:27+0100\n"
 "Last-Translator: Francesco Romano <francesco.romano@alteclab.it>\n"
 "Language-Team: Italian\n"
@@ -17,9 +17,44 @@ msgstr ""
 "X-Poedit-Language: Italian\n"
 "X-Poedit-Country: ITALY\n"
 
+#: /usr/src/freepbx/printextensions/page.printextensions.php:139
+msgid "Destination"
+msgstr ""
+
+#: /usr/src/freepbx/printextensions/page.printextensions.php:139
+msgid "Extension"
+msgstr "Interno"
+
+#: /usr/src/freepbx/printextensions/page.printextensions.php:55
+msgid "FreePBX Extension Layout"
+msgstr "Layout Interni Centrale Telefonica"
+
+#: /usr/src/freepbx/printextensions/page.printextensions.php:111
+msgid "No Matches for the Requested Search"
+msgstr ""
+
+#: /usr/src/freepbx/printextensions/page.printextensions.php:249
+#, php-format
+msgid "Printer Friendly Page"
+msgstr "Versione per la stampa"
+
+#: /usr/src/freepbx/printextensions/page.printextensions.php:40
+msgid "Search Bounded Regex"
+msgstr ""
+
+#: /usr/src/freepbx/printextensions/page.printextensions.php:38
+msgid "Search Exact Exten"
+msgstr ""
+
+#: /usr/src/freepbx/printextensions/page.printextensions.php:42
+msgid "Search Unbounded Regex"
+msgstr ""
+
+#: /usr/src/freepbx/printextensions/page.printextensions.php:27
 msgid "Search:"
 msgstr ""
 
+#: /usr/src/freepbx/printextensions/page.printextensions.php:28
 msgid ""
 "You can narrow the list of extensions based on a search criteria. If you "
 "search for an exact extension number the page will redirect to the edit page "
@@ -32,48 +67,8 @@ msgid ""
 "Friendly page will reflect the filtered list of numbers."
 msgstr ""
 
-msgid "Search Exact Exten"
-msgstr ""
-
-msgid "Search Bounded Regex"
-msgstr ""
-
-msgid "Search Unbounded Regex"
-msgstr ""
-
-msgid "FreePBX Extension Layout"
-msgstr "Layout Interni Centrale Telefonica"
-
-msgid "No Matches for the Requested Search"
-msgstr ""
-
-msgid "name"
-msgstr ""
-
-msgid "Extension"
-msgstr "Interno"
-
-msgid "featurecodeadmin"
-msgstr ""
-
-#, php-format
-msgid "featuredescription"
-msgstr ""
-
-#, php-format
-msgid "Printer Friendly Page"
-msgstr "Versione per la stampa"
-
-msgid "Print Extensions"
-msgstr "Stampa Interni"
-
-msgid "Reports"
-msgstr ""
-
-msgid ""
-"Creates a printable list of extension numbers used throughout the system "
-"from all modules that provide an internal callable number"
-msgstr ""
+#~ msgid "Print Extensions"
+#~ msgstr "Stampa Interni"
 
 #~ msgid "Name"
 #~ msgstr "Nome"

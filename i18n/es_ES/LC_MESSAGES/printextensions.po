@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: FreePBX - módulo printextensions module spanish "
 "translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-23 09:52+0000\n"
+"POT-Creation-Date: 2015-02-11 18:05-0500\n"
 "PO-Revision-Date: 2009-01-22 02:01+0100\n"
 "Last-Translator: Juan Asensio Sánchez <okelet@gmail.com>\n"
 "Language-Team: Juan Asensio Sánchez <okelet@gmail.com>\n"
@@ -14,9 +14,44 @@ msgstr ""
 "X-Poedit-Country: SPAIN\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
+#: /usr/src/freepbx/printextensions/page.printextensions.php:139
+msgid "Destination"
+msgstr ""
+
+#: /usr/src/freepbx/printextensions/page.printextensions.php:139
+msgid "Extension"
+msgstr "Extensión"
+
+#: /usr/src/freepbx/printextensions/page.printextensions.php:55
+msgid "FreePBX Extension Layout"
+msgstr "Distribución de extensiones de la centralita"
+
+#: /usr/src/freepbx/printextensions/page.printextensions.php:111
+msgid "No Matches for the Requested Search"
+msgstr ""
+
+#: /usr/src/freepbx/printextensions/page.printextensions.php:249
+#, php-format
+msgid "Printer Friendly Page"
+msgstr "Versión para imprimir"
+
+#: /usr/src/freepbx/printextensions/page.printextensions.php:40
+msgid "Search Bounded Regex"
+msgstr ""
+
+#: /usr/src/freepbx/printextensions/page.printextensions.php:38
+msgid "Search Exact Exten"
+msgstr ""
+
+#: /usr/src/freepbx/printextensions/page.printextensions.php:42
+msgid "Search Unbounded Regex"
+msgstr ""
+
+#: /usr/src/freepbx/printextensions/page.printextensions.php:27
 msgid "Search:"
 msgstr ""
 
+#: /usr/src/freepbx/printextensions/page.printextensions.php:28
 msgid ""
 "You can narrow the list of extensions based on a search criteria. If you "
 "search for an exact extension number the page will redirect to the edit page "
@@ -29,48 +64,8 @@ msgid ""
 "Friendly page will reflect the filtered list of numbers."
 msgstr ""
 
-msgid "Search Exact Exten"
-msgstr ""
-
-msgid "Search Bounded Regex"
-msgstr ""
-
-msgid "Search Unbounded Regex"
-msgstr ""
-
-msgid "FreePBX Extension Layout"
-msgstr "Distribución de extensiones de la centralita"
-
-msgid "No Matches for the Requested Search"
-msgstr ""
-
-msgid "name"
-msgstr ""
-
-msgid "Extension"
-msgstr "Extensión"
-
-msgid "featurecodeadmin"
-msgstr ""
-
-#, php-format
-msgid "featuredescription"
-msgstr ""
-
-#, php-format
-msgid "Printer Friendly Page"
-msgstr "Versión para imprimir"
-
-msgid "Print Extensions"
-msgstr "Imprimir extensiones"
-
-msgid "Reports"
-msgstr ""
-
-msgid ""
-"Creates a printable list of extension numbers used throughout the system "
-"from all modules that provide an internal callable number"
-msgstr ""
+#~ msgid "Print Extensions"
+#~ msgstr "Imprimir extensiones"
 
 #~ msgid "Name"
 #~ msgstr "Nombre"
