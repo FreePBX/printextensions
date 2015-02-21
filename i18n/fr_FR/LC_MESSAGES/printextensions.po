@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-11 18:05-0500\n"
+"POT-Creation-Date: 2015-02-20 19:51-0500\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Jouniaux <c.jouniaux@techtelecom.fr>\n"
 "Language-Team: \n"
@@ -10,44 +10,58 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: /usr/src/freepbx/printextensions/page.printextensions.php:139
+#: printextensions.i18n.php:5
+msgid ""
+"Creates a printable list of extension numbers used throughout the system "
+"from all modules that provide an internal callable number"
+msgstr ""
+
+#: page.printextensions.php:139
 msgid "Destination"
 msgstr ""
 
-#: /usr/src/freepbx/printextensions/page.printextensions.php:139
+#: page.printextensions.php:139
 msgid "Extension"
 msgstr "Extension"
 
-#: /usr/src/freepbx/printextensions/page.printextensions.php:55
+#: page.printextensions.php:55
 msgid "FreePBX Extension Layout"
 msgstr "Liste des extensions"
 
-#: /usr/src/freepbx/printextensions/page.printextensions.php:111
+#: page.printextensions.php:111
 msgid "No Matches for the Requested Search"
 msgstr ""
 
-#: /usr/src/freepbx/printextensions/page.printextensions.php:249
+#: printextensions.i18n.php:3 printextensions.i18n.php:6
+msgid "Print Extensions"
+msgstr "Imprimer extensions"
+
+#: page.printextensions.php:249
 #, php-format
 msgid "Printer Friendly Page"
 msgstr "Affichage pour impression"
 
-#: /usr/src/freepbx/printextensions/page.printextensions.php:40
+#: printextensions.i18n.php:4
+msgid "Reports"
+msgstr ""
+
+#: page.printextensions.php:40
 msgid "Search Bounded Regex"
 msgstr ""
 
-#: /usr/src/freepbx/printextensions/page.printextensions.php:38
+#: page.printextensions.php:38
 msgid "Search Exact Exten"
 msgstr ""
 
-#: /usr/src/freepbx/printextensions/page.printextensions.php:42
+#: page.printextensions.php:42
 msgid "Search Unbounded Regex"
 msgstr ""
 
-#: /usr/src/freepbx/printextensions/page.printextensions.php:27
+#: page.printextensions.php:27
 msgid "Search:"
 msgstr ""
 
-#: /usr/src/freepbx/printextensions/page.printextensions.php:28
+#: page.printextensions.php:28
 msgid ""
 "You can narrow the list of extensions based on a search criteria. If you "
 "search for an exact extension number the page will redirect to the edit page "
@@ -59,9 +73,6 @@ msgid ""
 "numbers all contain links to go directly to the edit pages and the Printer "
 "Friendly page will reflect the filtered list of numbers."
 msgstr ""
-
-#~ msgid "Print Extensions"
-#~ msgstr "Imprimer extensions"
 
 #~ msgid "Name"
 #~ msgstr "Nom"
