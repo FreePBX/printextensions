@@ -38,7 +38,7 @@ msgstr "PBX分机列表"
 
 #: page.printextensions.php:111
 msgid "No Matches for the Requested Search"
-msgstr ""
+msgstr "无查询记录"
 
 #: printextensions.i18n.php:3 printextensions.i18n.php:6
 msgid "Print Extensions"
@@ -51,7 +51,7 @@ msgstr "显示可打印页面"
 
 #: printextensions.i18n.php:4
 msgid "Reports"
-msgstr ""
+msgstr "报表"
 
 #: page.printextensions.php:40
 msgid "Search Bounded Regex"
@@ -59,7 +59,7 @@ msgstr ""
 
 #: page.printextensions.php:38
 msgid "Search Exact Exten"
-msgstr ""
+msgstr "准确查询分机"
 
 #: page.printextensions.php:42
 msgid "Search Unbounded Regex"
@@ -67,7 +67,7 @@ msgstr ""
 
 #: page.printextensions.php:27
 msgid "Search:"
-msgstr ""
+msgstr "查询"
 
 #: page.printextensions.php:28
 msgid ""
