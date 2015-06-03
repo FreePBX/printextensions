@@ -2,7 +2,7 @@
   <rawname>printextensions</rawname>
   <repo>standard</repo>
   <name>Print Extensions</name>
-  <version>13.0.1alpha1</version>
+  <version>13.0.1alpha2</version>
 	<publisher>Schmooze Com Inc</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -12,12 +12,13 @@
     <printextensions>Print Extensions</printextensions>
   </menuitems>
   <changelog>
+    *13.0.1alpha2* Inset and border changes
 		*13.0.1alpha1* Visual Changes
-  		*2.11.0.1* Include license file
+	   *2.11.0.1* Include license file
 		*2.11.0.0* bump to 2.11 and workaround for PHP bug that makes large numbers negative
 		*2.10.0.4* #5934
 		*2.10.0.3* #5787
-		*2.10.0.2* #5478 
+		*2.10.0.2* #5478
 		*2.10.0.1* #5463
 		*2.10.0.0* new version changes
 		*2.9.0.1* #4650

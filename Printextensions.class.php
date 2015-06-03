@@ -5,8 +5,8 @@ namespace FreePBX\modules;
  * In _Construct you may remove the database line if you don't use it
  * In getActionbar change "modulename" to the display value for the page
  * In getActionbar change extdisplay to align with whatever variable you use to decide if the page is in edit mode.
- * 
- */ 
+ *
+ */
 
 class Printextensions implements \BMO {
 	public function __construct($freepbx = null) {
@@ -39,7 +39,7 @@ class Printextensions implements \BMO {
 		foreach ($hookdata as $key => $value) {
 			$sections[] = $value;
 		}
-		$html .= '<div class="row">';
+		$html .= '<div class="row holder">';
 		$html .= '<div class="col-sm-12">';
 		foreach ($sections as $k => $v){
 			$html .= '<div class="row">';
