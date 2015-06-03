@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX printextensions\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-14 19:37-0400\n"
+"POT-Creation-Date: 2015-06-03 13:29-0400\n"
 "PO-Revision-Date: 2008-10-12 15:07+0100\n"
 "Last-Translator: Mikael Carlsson <mickecamino@gmail.com>\n"
 "Language-Team: \n"
@@ -16,12 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: Swedish\n"
 "X-Poedit-Country: SWEDEN\n"
-
-#: printextensions.i18n.php:8
-msgid ""
-"Creates a printable list of extension numbers used throughout the system "
-"from all modules that provide an internal callable number"
-msgstr ""
 
 #: page.printextensions.php:36
 msgid "Download PDF"
@@ -39,14 +33,6 @@ msgstr ""
 msgid "Print"
 msgstr ""
 
-#: printextensions.i18n.php:4 printextensions.i18n.php:10
-msgid "Print Extensions"
-msgstr "Skriv ut anknytningar"
-
-#: printextensions.i18n.php:6 printextensions.i18n.php:12
-msgid "Reports"
-msgstr ""
-
 #: Printextensions.class.php:31
 msgid "User"
 msgstr ""
@@ -54,6 +40,9 @@ msgstr ""
 #: Printextensions.class.php:29
 msgid "Users"
 msgstr ""
+
+#~ msgid "Print Extensions"
+#~ msgstr "Skriv ut anknytningar"
 
 #~ msgid "FreePBX Extension Layout"
 #~ msgstr "Anknytningar och funktionskoder"

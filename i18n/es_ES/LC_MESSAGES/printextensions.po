@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: FreePBX - módulo printextensions module spanish "
 "translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-14 19:37-0400\n"
+"POT-Creation-Date: 2015-06-03 13:29-0400\n"
 "PO-Revision-Date: 2015-03-24 21:58+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/"
@@ -17,14 +17,6 @@ msgstr ""
 "X-Poedit-Language: Spanish\n"
 "X-Poedit-Country: SPAIN\n"
 "X-Poedit-SourceCharset: utf-8\n"
-
-#: printextensions.i18n.php:8
-msgid ""
-"Creates a printable list of extension numbers used throughout the system "
-"from all modules that provide an internal callable number"
-msgstr ""
-"Crea una lista imprimible de los números de extensión usados en el sistema "
-"para todos los módulos que proveen un numero interno destino valido"
 
 #: page.printextensions.php:36
 msgid "Download PDF"
@@ -42,14 +34,6 @@ msgstr ""
 msgid "Print"
 msgstr ""
 
-#: printextensions.i18n.php:4 printextensions.i18n.php:10
-msgid "Print Extensions"
-msgstr "Imprimir extensiones"
-
-#: printextensions.i18n.php:6 printextensions.i18n.php:12
-msgid "Reports"
-msgstr "Reportes"
-
 #: Printextensions.class.php:31
 msgid "User"
 msgstr ""
@@ -57,6 +41,20 @@ msgstr ""
 #: Printextensions.class.php:29
 msgid "Users"
 msgstr ""
+
+#~ msgid ""
+#~ "Creates a printable list of extension numbers used throughout the system "
+#~ "from all modules that provide an internal callable number"
+#~ msgstr ""
+#~ "Crea una lista imprimible de los números de extensión usados en el "
+#~ "sistema para todos los módulos que proveen un numero interno destino "
+#~ "valido"
+
+#~ msgid "Print Extensions"
+#~ msgstr "Imprimir extensiones"
+
+#~ msgid "Reports"
+#~ msgstr "Reportes"
 
 #~ msgid "Destination"
 #~ msgstr "Destino"

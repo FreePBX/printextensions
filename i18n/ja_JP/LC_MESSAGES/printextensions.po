@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-14 19:37-0400\n"
+"POT-Creation-Date: 2015-06-03 13:29-0400\n"
 "PO-Revision-Date: 2013-11-07 13:19+0900\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -46,14 +46,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: Japanese\n"
 "X-Generator: Poedit 1.5.7\n"
-
-#: printextensions.i18n.php:8
-msgid ""
-"Creates a printable list of extension numbers used throughout the system "
-"from all modules that provide an internal callable number"
-msgstr ""
-"内部の呼び出し番号を提供するすべてのモジュールからシステム全体で使用される内"
-"線番号の印刷可能なリストを作成"
 
 #: page.printextensions.php:36
 msgid "Download PDF"
@@ -71,14 +63,6 @@ msgstr ""
 msgid "Print"
 msgstr ""
 
-#: printextensions.i18n.php:4 printextensions.i18n.php:10
-msgid "Print Extensions"
-msgstr "内線を印刷する"
-
-#: printextensions.i18n.php:6 printextensions.i18n.php:12
-msgid "Reports"
-msgstr "レポート"
-
 #: Printextensions.class.php:31
 msgid "User"
 msgstr ""
@@ -86,6 +70,19 @@ msgstr ""
 #: Printextensions.class.php:29
 msgid "Users"
 msgstr ""
+
+#~ msgid ""
+#~ "Creates a printable list of extension numbers used throughout the system "
+#~ "from all modules that provide an internal callable number"
+#~ msgstr ""
+#~ "内部の呼び出し番号を提供するすべてのモジュールからシステム全体で使用される"
+#~ "内線番号の印刷可能なリストを作成"
+
+#~ msgid "Print Extensions"
+#~ msgstr "内線を印刷する"
+
+#~ msgid "Reports"
+#~ msgstr "レポート"
 
 #~ msgid "Destination"
 #~ msgstr "宛先"

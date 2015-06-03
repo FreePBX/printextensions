@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-14 19:37-0400\n"
+"POT-Creation-Date: 2015-06-03 13:29-0400\n"
 "PO-Revision-Date: 2009-02-01 12:49+0800\n"
 "Last-Translator: 周征晟 <zhougongjizhe@163.com>\n"
 "Language-Team: EdwardBadBoy <zhougongjizhe@163.com>\n"
@@ -17,12 +17,6 @@ msgstr ""
 "X-Poedit-Language: Chinese\n"
 "X-Poedit-Country: CHINA\n"
 "X-Poedit-SourceCharset: utf-8\n"
-
-#: printextensions.i18n.php:8
-msgid ""
-"Creates a printable list of extension numbers used throughout the system "
-"from all modules that provide an internal callable number"
-msgstr ""
 
 #: page.printextensions.php:36
 msgid "Download PDF"
@@ -40,14 +34,6 @@ msgstr ""
 msgid "Print"
 msgstr ""
 
-#: printextensions.i18n.php:4 printextensions.i18n.php:10
-msgid "Print Extensions"
-msgstr "分机一览"
-
-#: printextensions.i18n.php:6 printextensions.i18n.php:12
-msgid "Reports"
-msgstr "报表"
-
 #: Printextensions.class.php:31
 msgid "User"
 msgstr ""
@@ -55,6 +41,12 @@ msgstr ""
 #: Printextensions.class.php:29
 msgid "Users"
 msgstr ""
+
+#~ msgid "Print Extensions"
+#~ msgstr "分机一览"
+
+#~ msgid "Reports"
+#~ msgstr "报表"
 
 #~ msgid "FreePBX Extension Layout"
 #~ msgstr "PBX分机列表"
