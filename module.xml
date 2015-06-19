@@ -2,7 +2,7 @@
   <rawname>printextensions</rawname>
   <repo>standard</repo>
   <name>Print Extensions</name>
-  <version>13.0.1alpha2</version>
+  <version>13.0.2</version>
 	<publisher>Schmooze Com Inc</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -12,6 +12,7 @@
     <printextensions>Print Extensions</printextensions>
   </menuitems>
   <changelog>
+		*13.0.2* Version bump Beta
     *13.0.1alpha2* Inset and border changes
 		*13.0.1alpha1* Visual Changes
 	   *2.11.0.1* Include license file
