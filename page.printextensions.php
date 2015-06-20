@@ -1,4 +1,4 @@
-<?php		
+<?php
 //	License for all code of this FreePBX module can be found in the license file inside the module directory
 //	Copyright 2015 Sangoma Technologies.
 //
@@ -15,8 +15,21 @@ $heading = $amp_conf['DASHBOARD_FREEPBX_BRAND'] . ' ' . _("Extensions");
   .container {
     width: 1170px;
   }
-  .footer {
-  	display: none;
+  h*{
+    display: block;
+  }
+  .alert{
+    display: none;
+  }
+  .fpbx-container {
+    display: block;
+    width: 100%;
+  }
+  #footer{
+    display: none;
+  }
+  .list-group-item{
+    padding: 2px;
   }
 }
 </style>
@@ -33,7 +46,7 @@ $heading = $amp_conf['DASHBOARD_FREEPBX_BRAND'] . ' ' . _("Extensions");
 			</div>
 			<div class="col-sm-3 hidden-xs bootnav hidden-print">
 				<div class="list-group">
-					 <a href="#" class="list-group-item clickable" id="pedl"><i class="fa fa-file-pdf-o"></i>&nbsp;<?php echo _("Download PDF")?></a>
+					 <!--<a href="#" class="list-group-item clickable" id="pedl"><i class="fa fa-file-pdf-o"></i>&nbsp;<?php echo _("Download PDF")?></a>-->
 					 <a href="#" class="list-group-item clickable" onClick="window.print()"><i class="fa fa-print"></i>&nbsp;<?php echo _("Print")?></a>
 				</div>
 			</div>
