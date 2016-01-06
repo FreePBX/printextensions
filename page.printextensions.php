@@ -137,7 +137,13 @@ foreach ($full_list as $key => $value) {
 
 	$module_select[$sub_heading_id] = $sub_heading;
 	$textext = $key != 'did' ? _("Extension") : _("Destination");
-	$html_txt_arr[$sub_heading] =  "<div class=\"$sub_heading_id\"><table border=\"0\" width=\"75%\"><tr width='90%'><td><br><strong>".sprintf("%s",$sub_heading)."</strong></td><td width=\"10%\" align=\"right\"><br><strong>".$textext."</strong></td></tr>\n";
+	$html_txt_arr[$sub_heading] = "<div class=\"$sub_heading_id\"><table border=\"0\" width=\"75%\"><tr width='90%'><td><br><strong><a href=\"config.php?display=printextensions&sort_table=$sub_heading_id&sort_col=1\">".sprintf("%s",$sub_heading)."</a></strong></td><td width=\"10%\" align=\"right\"><br><strong><a href=\"config.php?display=printextensions&sort_table=$sub_heading_id&sort_col=2\">".$textext."</a></strong></td></tr>\n";
+	if ($_GET["sort_table"] == $sub_heading_id || $_POST["sort_table"] == $sub_heading_id) {
+		if ($_GET["sort_col"] == 1 || $_POST["sort_col"] == 1) {
+			asort($value);
+		} else {
+		}
+	}
 	foreach ($value as $exten => $item) {
 		$description = explode(":",$item['description'],2);
 		$label_desc = count($description) <= 1 || trim($description[1]) == '' ? $exten : $description[1];
@@ -231,6 +237,10 @@ if (!$quietmode && ($search_pattern == '' || $found > 0)) {
 	$rnav_txt .= '<input type="hidden" name="quietmode" value="on">';
 	$rnav_txt .= '<input type="hidden" name="display" value="'.$dispnum.'">';
 	$rnav_txt .= '<input type="hidden" name="type" value="'.$type.'">';
+	if ($_GET["sort_table"]) {
+		$rnav_txt .= '<input type="hidden" name="sort_table" value="'.$_GET["sort_table"].'">';
+		$rnav_txt .= '<input type="hidden" name="sort_col" value="'.$_GET["sort_col"].'">';
+	}
 	if ($search_pattern != '') {
 		$rnav_txt .= '<input type="hidden" name="search_pattern" value="'.$_POST['search_pattern'].'">';
 		if (isset($_POST['exact'])) {
