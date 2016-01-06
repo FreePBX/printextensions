@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-20 19:51-0500\n"
+"POT-Creation-Date: 2016-01-06 11:52-0800\n"
 "PO-Revision-Date: 2013-11-07 13:19+0900\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -47,7 +47,7 @@ msgstr ""
 "Language: Japanese\n"
 "X-Generator: Poedit 1.5.7\n"
 
-#: printextensions.i18n.php:5
+#: printextensions.i18n.php:8
 msgid ""
 "Creates a printable list of extension numbers used throughout the system "
 "from all modules that provide an internal callable number"
@@ -71,16 +71,16 @@ msgstr "FreePBX 内線レイアウト"
 msgid "No Matches for the Requested Search"
 msgstr "検索に一致する結果が見つかりませんでした"
 
-#: printextensions.i18n.php:3 printextensions.i18n.php:6
+#: printextensions.i18n.php:4 printextensions.i18n.php:10
 msgid "Print Extensions"
 msgstr "内線を印刷する"
 
-#: page.printextensions.php:249
+#: page.printextensions.php:259
 #, php-format
 msgid "Printer Friendly Page"
 msgstr "印刷ページ"
 
-#: printextensions.i18n.php:4
+#: printextensions.i18n.php:6 printextensions.i18n.php:12
 msgid "Reports"
 msgstr "レポート"
 
