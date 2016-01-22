@@ -29,11 +29,11 @@ class Printextensions implements \BMO {
 		$ret['title'] = _("Users");
 		$featurecodes = \featurecodes_getAllFeaturesDetailed();
 		$ret['textdesc'] = _('User');
-    	$ret['numdesc'] = _('Extension');
-    	$ret['items'] = array();
-    	foreach ($users as $user) {
-    		$ret['items'][] = array($user[1],$user[0]);
-    	}
+		$ret['numdesc'] = _('Extension');
+		$ret['items'] = array();
+		foreach ($users as $user) {
+			$ret['items'][] = array($user[1],$user[0]);
+		}
 		$sections[] = $ret;
 		$hookdata = \FreePBX::Hooks()->processHooks();
 		foreach ($hookdata as $key => $value) {
