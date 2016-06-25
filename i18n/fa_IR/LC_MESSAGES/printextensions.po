@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-07-20 23:07-0400\n"
-"PO-Revision-Date: 2016-05-15 07:07+0200\n"
-"Last-Translator: Media <mousavi.media@gmail.com>\n"
+"PO-Revision-Date: 2016-06-25 12:02+0200\n"
+"Last-Translator: psdk <hyavari26@gmail.com>\n"
 "Language-Team: Persian (Iran) "
 "<http://weblate.freepbx.org/projects/freepbx/printextensions/fa_IR/>\n"
 "Language: fa_IR\n"
@@ -27,7 +27,7 @@ msgstr "دانلود PDF"
 
 #: Printextensions.class.php:32
 msgid "Extension"
-msgstr "مقصد"
+msgstr "داخلی"
 
 #: page.printextensions.php:6
 msgid "Extensions"
