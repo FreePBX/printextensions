@@ -47,7 +47,7 @@ $heading = $amp_conf['DASHBOARD_FREEPBX_BRAND'] . ' ' . _("Extensions");
 			<div class="col-sm-3 hidden-xs bootnav hidden-print">
 				<div class="list-group">
 					 <!--<a href="#" class="list-group-item clickable" id="pedl"><i class="fa fa-file-pdf-o"></i>&nbsp;<?php echo _("Download PDF")?></a>-->
-					 <a href="#" class="list-group-item clickable" onClick="window.print()"><i class="fa fa-print"></i>&nbsp;<?php echo _("Print")?></a>
+					 <a href="#" class="list-group-item clickable" onClick="$('#fpbxsearch').hide();window.print();$('#fpbxsearch').show();"><i class="fa fa-print"></i>&nbsp;<?php echo _("Print")?></a>
 				</div>
 			</div>
 		</div>
