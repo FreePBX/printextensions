@@ -37,97 +37,87 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-20 23:07-0400\n"
-"PO-Revision-Date: 2013-11-07 13:19+0900\n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2015-02-20 19:51-0500\n"
+"PO-Revision-Date: 2015-07-30 09:15+0200\n"
+"Last-Translator: Kevin <kevin@qloog.com>\n"
+"Language-Team: Japanese "
+"<http://weblate.freepbx.org/projects/freepbx/printextensions/ja_JP/>\n"
+"Language: ja_JP\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: Japanese\n"
-"X-Generator: Poedit 1.5.7\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2.2-dev\n"
 
-#: page.printextensions.php:49
-msgid "Download PDF"
+#: printextensions.i18n.php:5
+msgid ""
+"Creates a printable list of extension numbers used throughout the system "
+"from all modules that provide an internal callable number"
 msgstr ""
+"内部の呼び出し番号を提供するすべてのモジュールからシステム全体で使用される内"
+"線番号の印刷可能なリストを作成"
 
-#: Printextensions.class.php:32
+#: page.printextensions.php:139
+msgid "Destination"
+msgstr "宛先"
+
+#: page.printextensions.php:139
 msgid "Extension"
 msgstr "内線"
 
-#: page.printextensions.php:6
-msgid "Extensions"
+#: page.printextensions.php:55
+msgid "FreePBX Extension Layout"
+msgstr "FreePBX 内線レイアウト"
+
+#: page.printextensions.php:111
+msgid "No Matches for the Requested Search"
+msgstr "検索に一致する結果が見つかりませんでした"
+
+#: printextensions.i18n.php:3 printextensions.i18n.php:6
+msgid "Print Extensions"
+msgstr "内線を一覧表示する"
+
+#: page.printextensions.php:249
+#, php-format
+msgid "Printer Friendly Page"
+msgstr "印刷用ページ"
+
+#: printextensions.i18n.php:4
+msgid "Reports"
+msgstr "レポート"
+
+#: page.printextensions.php:40
+msgid "Search Bounded Regex"
+msgstr "制限付きの正規表現検索"
+
+#: page.printextensions.php:38
+msgid "Search Exact Exten"
+msgstr "正確な内線の検索"
+
+#: page.printextensions.php:42
+msgid "Search Unbounded Regex"
+msgstr "無制限の正規表現検索"
+
+#: page.printextensions.php:27
+msgid "Search:"
+msgstr "検索"
+
+#: page.printextensions.php:28
+msgid ""
+"You can narrow the list of extensions based on a search criteria. If you "
+"search for an exact extension number the page will redirect to the edit page "
+"for the given number. You can also do a bounded or unbounded regex search. "
+"The bounded search simply encloses you search criteria between a '^' and '$' "
+"where as an unbounded one is completely free form. All normal regex patterns "
+"are acceptable in your search. So for example, a bounded search of 20\\d\\d "
+"would search for all extensions of the form 20XX. The resulting lists of "
+"numbers all contain links to go directly to the edit pages and the Printer "
+"Friendly page will reflect the filtered list of numbers."
 msgstr ""
-
-#: page.printextensions.php:50
-msgid "Print"
-msgstr ""
-
-#: Printextensions.class.php:31
-msgid "User"
-msgstr ""
-
-#: Printextensions.class.php:29
-msgid "Users"
-msgstr ""
-
-#~ msgid ""
-#~ "Creates a printable list of extension numbers used throughout the system "
-#~ "from all modules that provide an internal callable number"
-#~ msgstr ""
-#~ "内部の呼び出し番号を提供するすべてのモジュールからシステム全体で使用される"
-#~ "内線番号の印刷可能なリストを作成"
-
-#~ msgid "Print Extensions"
-#~ msgstr "内線を印刷する"
-
-#~ msgid "Reports"
-#~ msgstr "レポート"
-
-#~ msgid "Destination"
-#~ msgstr "宛先"
-
-#~ msgid "FreePBX Extension Layout"
-#~ msgstr "FreePBX 内線レイアウト"
-
-#~ msgid "No Matches for the Requested Search"
-#~ msgstr "検索に一致する結果が見つかりませんでした"
-
-#~ msgid "Printer Friendly Page"
-#~ msgstr "印刷ページ"
-
-#~ msgid "Search Bounded Regex"
-#~ msgstr "制限付きの正規表現検索"
-
-#~ msgid "Search Exact Exten"
-#~ msgstr "正確な内線の検索"
-
-#~ msgid "Search Unbounded Regex"
-#~ msgstr "無制限の正規表現検索"
-
-#~ msgid "Search:"
-#~ msgstr "検索"
-
-#~ msgid ""
-#~ "You can narrow the list of extensions based on a search criteria. If you "
-#~ "search for an exact extension number the page will redirect to the edit "
-#~ "page for the given number. You can also do a bounded or unbounded regex "
-#~ "search. The bounded search simply encloses you search criteria between a "
-#~ "'^' and '$' where as an unbounded one is completely free form. All normal "
-#~ "regex patterns are acceptable in your search. So for example, a bounded "
-#~ "search of 20\\d\\d would search for all extensions of the form 20XX. The "
-#~ "resulting lists of numbers all contain links to go directly to the edit "
-#~ "pages and the Printer Friendly page will reflect the filtered list of "
-#~ "numbers."
-#~ msgstr ""
-#~ "検索条件に基づいて内線リストを絞り込むことができます。正確な内線番号を検索"
-#~ "するとその番号の編集ページにリダイレクトされます。また、制限または無制限の"
-#~ "正規表現検索を行うことができます。制限付きの検索の場合、検索条件"
-#~ "は'^'と'$'で囲む必要があり、制限なしの場合は完全に自由な形式となります。検"
-#~ "索の際、正規表現のパターンはすべて有効となります。例えば、20\\d\\dと制限付"
-#~ "きの検索行うと20XX形式の内線がすべて対象となります。番号の一覧結果は、すべ"
-#~ "て編集ページと印刷用ページへのリンクが含まれており、番号でフィルタされた一"
-#~ "覧が反映されるでしょう。"
+"検索条件に基づいて内線リストを絞り込むことができます。正確な内線番号を検索すると、その番号の編集ページにリダイレクトされます。また、制限または無制限の正規"
+"表現検索を行うことができます。制限付きの検索の場合、検索条件は'^'と'$'で囲む必要があり、制限なしの場合は完全に自由な形式となります。検索の際、正規表"
+"現のパターンはすべて有効となります。例えば、20\\d\\dと制限付きの検索行うと20XX形式の内線がすべて対象となります。番号の一覧結果には、各項目の編"
+"集ページへのリンクが含まれます。また、印刷用ページでは番号でフィルタされた一覧が反映されます。"
 
 #~ msgid "name"
 #~ msgstr "名前"
