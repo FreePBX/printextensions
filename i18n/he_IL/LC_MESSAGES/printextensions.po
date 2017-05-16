@@ -20,13 +20,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-20 23:07-0400\n"
+"POT-Creation-Date: 2017-05-16 12:23-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: printextensions.i18n.php:8
+msgid ""
+"Creates a printable list of extension numbers used throughout the system "
+"from all modules that provide an internal callable number"
+msgstr ""
 
 #: page.printextensions.php:49
 msgid "Download PDF"
@@ -42,6 +48,14 @@ msgstr ""
 
 #: page.printextensions.php:50
 msgid "Print"
+msgstr ""
+
+#: printextensions.i18n.php:4 printextensions.i18n.php:10
+msgid "Print Extensions"
+msgstr ""
+
+#: printextensions.i18n.php:6
+msgid "Reports"
 msgstr ""
 
 #: Printextensions.class.php:31
