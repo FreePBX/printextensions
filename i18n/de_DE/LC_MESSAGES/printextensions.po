@@ -3,59 +3,59 @@
 # For licensing information, please see the file named LICENSE located in the module directory
 #
 # FreePBX language template for printextensions
-# Copyright (C) 2008-2015 Sangoma, Inc.
+# Copyright (C) 2008-2017 Sangoma Technologies, Inc.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-16 12:23-0400\n"
-"PO-Revision-Date: 2019-01-25 15:51+0000\n"
-"Last-Translator: Media Mousavi <mousavi.media@gmail.com>\n"
-"Language-Team: Persian <http://*/projects/freepbx/printextensions/fa/>\n"
-"Language: fa_IR\n"
+"PO-Revision-Date: 2018-06-26 13:58+0000\n"
+"Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
+"Language-Team: German <http://*/projects/freepbx/printextensions/de/>\n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 2.19.1\n"
 
 #: printextensions.i18n.php:8
 msgid ""
 "Creates a printable list of extension numbers used throughout the system "
 "from all modules that provide an internal callable number"
 msgstr ""
-"یک لیست قابل چاپ از شماره های افزوده مورد استفاده در تمام سیستم را از همه ی "
-"ماژول هایی که شماره تماس داخلی را ارائه می دهند ایجاد می کند"
+"Erzeugt eine druckbare Liste aller Nebenstellennummern, die im System von "
+"Modulen genutzt werden, die eine interne anrufbare Nummer bereitstellen"
 
 #: page.printextensions.php:49
 msgid "Download PDF"
-msgstr "دانلود PDF"
+msgstr "PDF herunterladen"
 
 #: Printextensions.class.php:32
 msgid "Extension"
-msgstr "داخلی"
+msgstr "Nebenstelle"
 
 #: page.printextensions.php:6
 msgid "Extensions"
-msgstr "داخلی ها"
+msgstr "Nebenstellen"
 
 #: page.printextensions.php:50
 msgid "Print"
-msgstr "چاپ"
+msgstr "Drucken"
 
 #: printextensions.i18n.php:4 printextensions.i18n.php:10
 msgid "Print Extensions"
-msgstr "برنامه های افزودنی چاپ"
+msgstr "Erweiterungen drucken"
 
 #: printextensions.i18n.php:6
 msgid "Reports"
-msgstr "گزارش ها"
+msgstr "Berichte"
 
 #: Printextensions.class.php:31
 msgid "User"
-msgstr "کاربر"
+msgstr "Benutzer"
 
 #: Printextensions.class.php:29
 msgid "Users"
-msgstr "کاربران"
+msgstr "Benutzer"
