@@ -47,6 +47,12 @@ $heading = $amp_conf['DASHBOARD_FREEPBX_BRAND'] . ' ' . _("Extensions");
 			<div class="col-sm-3 hidden-xs bootnav hidden-print">
 				<div class="list-group">
 					 <!--<a href="#" class="list-group-item clickable" id="pedl"><i class="fa fa-file-pdf-o"></i>&nbsp;<?php echo _("Download PDF")?></a>-->
+					 <?php $menuitems =  \FreePBX::Printextensions()->getSections(true);
+							echo '<ul>';
+					 foreach($menuitems as $seclectitem) {
+								echo '<li><input type="checkbox" value="'.$seclectitem['id'].'" name="module_'.$seclectitem['id'].'" id="module_'.$seclectitem['id'].'" class="disp_filter" checked=""><label id="lab_'.$seclectitem['id'].'" name="lab_'.$seclectitem['id'].'" for="'.$seclectitem['id'].'">'.$seclectitem['title'].'</label></li>';
+					 }echo '</ul>';
+					 ?>
 					 <a href="#" class="list-group-item clickable" onClick="$('#fpbxsearch').hide();window.print();$('#fpbxsearch').show();"><i class="fa fa-print"></i>&nbsp;<?php echo _("Print")?></a>
 				</div>
 			</div>

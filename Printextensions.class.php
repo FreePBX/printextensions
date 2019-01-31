@@ -22,8 +22,9 @@ class Printextensions implements \BMO {
 	public function restore($backup) {}
 	public function doConfigPageInit($page) {
 	}
-	public function getSections(){
+	public function getSections($sidebar=false){
 		$sections = array();
+		$sidediv = array();
 		$users = \FreePBX::Core()->listUsers(true);
 		$ret = array();
 		$ret['title'] = _("Users");
@@ -42,7 +43,11 @@ class Printextensions implements \BMO {
 		$html .= '<div class="row holder">';
 		$html .= '<div class="col-sm-12">';
 		foreach ($sections as $k => $v){
-			$html .= '<div class="row">';
+			$id = str_replace(" ","_",$v['title']);
+			if($sidebar == true) {
+				$sidediv[] = array('id'=> $id , 'title' => $v['title']);
+			}
+			$html .= '<div class="row" id="'.$id.'">';
 			$html .= '<h3>'.$v['title'].'</h3>';
 			$html .= '<ul class="list-group">';
 			foreach ($v['items'] as $item) {
@@ -54,6 +59,9 @@ class Printextensions implements \BMO {
 		}
 		$html .= '</div>';
 		$html .= '</div>';
+		if($sidebar == true) {
+			return $sidediv;
+		}
 		return $html;
 	}
 }
