@@ -6,17 +6,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-16 12:23-0400\n"
+"POT-Creation-Date: 2019-01-31 14:50+0530\n"
 "PO-Revision-Date: 2017-05-17 01:39+0200\n"
 "Last-Translator: Evgeniy <yen81@mail.ru>\n"
-"Language-Team: Russian "
-"<http://weblate.freepbx.org/projects/freepbx/printextensions/ru_RU/>\n"
+"Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/"
+"printextensions/ru_RU/>\n"
 "Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
-"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.4\n"
 
 #: printextensions.i18n.php:8
@@ -31,7 +31,7 @@ msgstr ""
 msgid "Download PDF"
 msgstr "Скачать PDF"
 
-#: Printextensions.class.php:32
+#: Printextensions.class.php:33
 msgid "Extension"
 msgstr "Номер"
 
@@ -39,7 +39,7 @@ msgstr "Номер"
 msgid "Extensions"
 msgstr "Внутренние номера"
 
-#: page.printextensions.php:50
+#: page.printextensions.php:56
 msgid "Print"
 msgstr "Печать"
 
@@ -51,11 +51,11 @@ msgstr "Распечатать список внутренних номеров"
 msgid "Reports"
 msgstr "Отчеты"
 
-#: Printextensions.class.php:31
+#: Printextensions.class.php:32
 msgid "User"
 msgstr "Пользователь"
 
-#: Printextensions.class.php:29
+#: Printextensions.class.php:30
 msgid "Users"
 msgstr "Пользователи"
 

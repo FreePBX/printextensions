@@ -2,11 +2,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-16 12:23-0400\n"
+"POT-Creation-Date: 2019-01-31 14:50+0530\n"
 "PO-Revision-Date: 2017-12-01 16:12+0200\n"
 "Last-Translator: jeremie <jeremie@famillecattan.com>\n"
-"Language-Team: French "
-"<http://weblate.freepbx.org/projects/freepbx/printextensions/fr_FR/>\n"
+"Language-Team: French <http://weblate.freepbx.org/projects/freepbx/"
+"printextensions/fr_FR/>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,7 +26,7 @@ msgstr ""
 msgid "Download PDF"
 msgstr "Télécharger PDF"
 
-#: Printextensions.class.php:32
+#: Printextensions.class.php:33
 msgid "Extension"
 msgstr "Poste"
 
@@ -34,7 +34,7 @@ msgstr "Poste"
 msgid "Extensions"
 msgstr "Postes"
 
-#: page.printextensions.php:50
+#: page.printextensions.php:56
 msgid "Print"
 msgstr "Imprimer"
 
@@ -46,11 +46,11 @@ msgstr "Imprimer extensions"
 msgid "Reports"
 msgstr "Rapports"
 
-#: Printextensions.class.php:31
+#: Printextensions.class.php:32
 msgid "User"
 msgstr "Utilisateur"
 
-#: Printextensions.class.php:29
+#: Printextensions.class.php:30
 msgid "Users"
 msgstr "Utilisateurs"
 

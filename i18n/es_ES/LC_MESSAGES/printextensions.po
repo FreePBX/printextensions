@@ -3,15 +3,15 @@ msgstr ""
 "Project-Id-Version: FreePBX - módulo printextensions module spanish "
 "translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-16 12:23-0400\n"
+"POT-Creation-Date: 2019-01-31 14:50+0530\n"
 "PO-Revision-Date: 2016-12-10 21:46+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/"
 "printextensions/es_ES/>\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es_ES\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.4\n"
 "X-Poedit-Language: Spanish\n"
@@ -30,7 +30,7 @@ msgstr ""
 msgid "Download PDF"
 msgstr "Descargar PDF"
 
-#: Printextensions.class.php:32
+#: Printextensions.class.php:33
 msgid "Extension"
 msgstr "Extensión"
 
@@ -38,7 +38,7 @@ msgstr "Extensión"
 msgid "Extensions"
 msgstr "Extensiones"
 
-#: page.printextensions.php:50
+#: page.printextensions.php:56
 msgid "Print"
 msgstr "Imprimir"
 
@@ -50,11 +50,11 @@ msgstr "Imprimir extensiones"
 msgid "Reports"
 msgstr "Reportes"
 
-#: Printextensions.class.php:31
+#: Printextensions.class.php:32
 msgid "User"
 msgstr "Usuario"
 
-#: Printextensions.class.php:29
+#: Printextensions.class.php:30
 msgid "Users"
 msgstr "Usuarios"
 

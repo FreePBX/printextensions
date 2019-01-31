@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-16 12:23-0400\n"
+"POT-Creation-Date: 2019-01-31 14:50+0530\n"
 "PO-Revision-Date: 2019-01-25 15:51+0000\n"
 "Last-Translator: Media Mousavi <mousavi.media@gmail.com>\n"
 "Language-Team: Persian <http://*/projects/freepbx/printextensions/fa/>\n"
@@ -32,7 +32,7 @@ msgstr ""
 msgid "Download PDF"
 msgstr "دانلود PDF"
 
-#: Printextensions.class.php:32
+#: Printextensions.class.php:33
 msgid "Extension"
 msgstr "داخلی"
 
@@ -40,7 +40,7 @@ msgstr "داخلی"
 msgid "Extensions"
 msgstr "داخلی ها"
 
-#: page.printextensions.php:50
+#: page.printextensions.php:56
 msgid "Print"
 msgstr "چاپ"
 
@@ -52,10 +52,10 @@ msgstr "برنامه های افزودنی چاپ"
 msgid "Reports"
 msgstr "گزارش ها"
 
-#: Printextensions.class.php:31
+#: Printextensions.class.php:32
 msgid "User"
 msgstr "کاربر"
 
-#: Printextensions.class.php:29
+#: Printextensions.class.php:30
 msgid "Users"
 msgstr "کاربران"

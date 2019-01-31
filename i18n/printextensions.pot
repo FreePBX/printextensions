@@ -3,16 +3,17 @@
 # For licensing information, please see the file named LICENSE located in the module directory
 #
 # FreePBX language template for printextensions
-# Copyright (C) 2008-2017 Sangoma Technologies, Inc.
+# Copyright (C) 2008-2019 Sangoma Technologies, Inc.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-16 12:23-0400\n"
+"POT-Creation-Date: 2019-01-31 14:50+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -27,7 +28,7 @@ msgstr ""
 msgid "Download PDF"
 msgstr ""
 
-#: Printextensions.class.php:32
+#: Printextensions.class.php:33
 msgid "Extension"
 msgstr ""
 
@@ -35,7 +36,7 @@ msgstr ""
 msgid "Extensions"
 msgstr ""
 
-#: page.printextensions.php:50
+#: page.printextensions.php:56
 msgid "Print"
 msgstr ""
 
@@ -48,10 +49,10 @@ msgstr ""
 msgid "Reports"
 msgstr ""
 
-#: Printextensions.class.php:31
+#: Printextensions.class.php:32
 msgid "User"
 msgstr ""
 
-#: Printextensions.class.php:29
+#: Printextensions.class.php:30
 msgid "Users"
 msgstr ""
