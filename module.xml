@@ -8,6 +8,7 @@
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
   <category>Reports</category>
   <description>Creates a printable list of extension numbers used throughout the system from all modules that provide an internal callable number</description>
+  <more-info>https://wiki.freepbx.org/display/F2/Print+Extensions</more-info>
   <menuitems>
     <printextensions>Print Extensions</printextensions>
   </menuitems>
