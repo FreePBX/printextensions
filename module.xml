@@ -2,7 +2,7 @@
   <rawname>printextensions</rawname>
   <repo>standard</repo>
   <name>Print Extensions</name>
-  <version>13.0.3.2</version>
+  <version>13.0.3.3</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -13,6 +13,7 @@
     <printextensions>Print Extensions</printextensions>
   </menuitems>
 	<changelog>
+		*13.0.3.3* Packaging of ver 13.0.3.3
 		*13.0.3.2* FREEPBX-18624 Missing options in the Print Extensions Module 
 		*13.0.3.1* FREEPBX-14720 Print Extension shows Search box when printing extensionlist
 		*13.0.3* Hide unimplimented PDF and format print stylesheet
