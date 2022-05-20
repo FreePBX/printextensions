@@ -8,13 +8,20 @@ namespace FreePBX\modules;
  *
  */
 
-class Printextensions implements \BMO {
+use FreePBX_Helpers;
+use BMO;
+
+include __DIR__ . '/vendor/autoload.php';
+
+class Printextensions extends \FreePBX_Helpers implements \BMO {
 	public function __construct($freepbx = null) {
 		if ($freepbx == null) {
 			throw new Exception("Not given a FreePBX Object");
 		}
 		$this->FreePBX = $freepbx;
 		$this->content = "";
+		$this->core = $freepbx->Core();
+		$this->hooks = $freepbx->Hooks();
 	}
 	public function install() {}
 	public function uninstall() {}
@@ -22,46 +29,128 @@ class Printextensions implements \BMO {
 	public function restore($backup) {}
 	public function doConfigPageInit($page) {
 	}
-	public function getSections($sidebar=false){
+
+
+	public function ajaxRequest($req, &$setting)
+	{
+		// ** Allow remote consultation with Postman **
+		// ********************************************
+		// $setting['authenticate'] = false;
+		// $setting['allowremote'] = true;
+		// return true;
+		// ********************************************
+		switch($req)
+		{
+			case "getPdf":
+				return true;
+			break;
+		}
+		return false;
+	}
+
+	public function ajaxCustomHandler()
+	{
+		switch($_REQUEST['command']) {
+			case "getPdf":
+				if (! isset($_REQUEST['names'])) {
+					http_response_code(400);
+				}
+				else if($_SERVER['REQUEST_METHOD'] !== 'POST')
+				{
+					http_response_code(405);
+				}
+				else
+				{
+					http_response_code(200);
+					header("Content-type: application/pdf");
+					header("Content-Disposition:attachment;filename='freepbx-extensions.pdf'");
+					
+					$names = explode(",", $_REQUEST['names']);
+					$pdf = $this->generatePdf($names);
+					$pdf->Output();
+				}
+				exit();
+			break;
+		}
+	}
+
+	public function ajaxHandler() {}
+
+	public function getSections($sidebar=false, $show_all = false, $sort = true) {
 		$sections = array();
 		$sidediv = array();
-		$users = \FreePBX::Core()->listUsers(true);
-		$ret = array();
-		$ret['title'] = _("Users");
+		$users = $this->core->listUsers(true);
+		$ret = array(
+			'title'    => _("Users"),
+			'textdesc' => _('User'),
+			'numdesc'  => _('Extension'),
+			'items'    => array(),
+		);
 		$featurecodes = \featurecodes_getAllFeaturesDetailed();
-		$ret['textdesc'] = _('User');
-		$ret['numdesc'] = _('Extension');
-		$ret['items'] = array();
+		
 		foreach ($users as $user) {
 			$ret['items'][] = array($user[1],$user[0]);
 		}
-		$sections[] = $ret;
-		$hookdata = \FreePBX::Hooks()->processHooks();
+		$sections['Users'] = $ret;
+		$hookdata = $this->hooks->processHooks();
+		
 		foreach ($hookdata as $key => $value) {
-			$sections[] = $value;
+			$sections[$key] = $value;
 		}
-		$html .= '<div class="row holder">';
-		$html .= '<div class="col-sm-12">';
-		foreach ($sections as $k => $v){
-			$id = str_replace(" ","_",$v['title']);
+		foreach ($sections as $k => $v)
+		{
+			if ((count($v['items']) == 0) && ($show_all == false)) {
+				// Skip section if no results
+				continue;
+			}
+			$id = strtolower($k);
 			if($sidebar == true) {
 				$sidediv[] = array('id'=> $id , 'title' => $v['title']);
+			} else {
+				$items = $v['items'];
+				if ($sort) {
+					usort($items, array($this, 'sort_by_orden'));
+				}
+				$sidediv[] = array('id'=> $id , 'title' => $v['title'], 'items' => $items);
 			}
-			$html .= '<div class="row" id="'.$id.'">';
-			$html .= '<h3>'.$v['title'].'</h3>';
-			$html .= '<ul class="list-group">';
-			foreach ($v['items'] as $item) {
-				$html .= '	<li class="list-group-item col-sm-6"><b>'.$item[1].'</b> - '.$item[0].'</li>';
+		}
+		return $sidediv;
+	}
+
+	private function sort_by_orden ($a, $b) {
+		$int_a = preg_replace('/[^0-9]/', '', $a[1]);
+		$int_b = preg_replace('/[^0-9]/', '', $b[1]);
+		return (is_numeric($int_a) ? $int_a : 0) - (is_numeric($int_b) ? $int_b : 0);
+	}
+
+	function generatePdf($names = array())
+	{
+		//Info: https://codigonaranja.com/como-crear-un-pdf-con-php-y-html
+		//	    https://www.kodetop.com/generar-archivos-pdf-con-php/
+
+		$ls_ext = \FreePBX::Printextensions()->getSections(false, true);
+
+		$mpdf = new \Mpdf\Mpdf(['tempDir' => sys_get_temp_dir()]);
+		$mpdf->WriteHTML(sprintf('<h1>%s</h1>', _('FreePBX Extensions')));
+
+		foreach ($ls_ext as $k => $v)
+		{
+			if (! in_array($v['id'], $names)) { 
+				continue;
 			}
-			$html .= '</ul>';
-			$html .= '<br/>';
-			$html .= '	</div>';
+			
+			$mpdf->WriteHTML('<h3>'.$v['title'].'</h3>');
+			if (count($v['items']) == 0) {
+				$mpdf->WriteHTML('<b>'._("Empty").'</b>');
+			}
+			else {
+				foreach ($v['items'] as $item) {
+					if (trim($item[1]) == "") {continue;}
+					$mpdf->WriteHTML(sprintf('<b>%s</b> - %s<br>', $item[1], $item[0]));
+				}
+			}
+			$mpdf->WriteHTML('<br/>');
 		}
-		$html .= '</div>';
-		$html .= '</div>';
-		if($sidebar == true) {
-			return $sidediv;
-		}
-		return $html;
+		return $mpdf;
 	}
 }
