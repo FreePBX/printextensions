@@ -8,12 +8,6 @@ $(document).ready(function() {
         }
     });
 
-    $('#btnPrintList').click(function () {
-	    $('#fpbxsearch').hide();
-        window.print();
-        $('#fpbxsearch').show();
-    });
-
     $('#btnPrintPdf').on('click', function ()
     {
         var inputs = $('input[id^="module_"]:checked');

@@ -1,66 +1,15 @@
-@media print {
-	div.footer {
-		display: none;
-	}
-	div.bootnav {
-		display: none;
-	}
-	.alert{
-		display: none;
-	}
-	#footer {
-		display: none;
-	}
-	#fpbxsearch {
-		display: none;
-	}
-	
-	@page {
-		// TODO: Problem!! Applying size or margin applies a page break when long lists.
-		// size: auto;
-		// size: A4;
-		// size: 330mm 427mm;
-		// margin: 14mm;
-	}
-	
-	#page_body {
-
-		h* {
-			display: block;
-		}
-
-		.fpbx-container {
-			display: block;
-			width: 100%;
-		}
-
-		.display {
-			border: 0px;
-		}
-
-		.list-extensions {
-			flex: 0 0 100%;
-			max-width: 100%;
-
-			.list-group-item {
-				border: 0px !important;
-				background-color: transparent !important;
-				padding-left: 40px;
-
-				// TODO: Problem!! Applying padding 0 applies a page break when long lists.
-				// padding: 0px 0px 0px 40px !important;
-			}
-		
-		}
-	}
-}
-
 .holder {
-	margin-left: 5px;
-	margin-right: 5px;
+	margin: 5px;
 	.list-group-item {
 		border-radius: 0px;
 		background-color: rgba(93, 101, 99, 0.06);
 		border: 1px solid #ddd;
+	}
+}
+
+.bootnav {
+	h2 {
+		margin: 0px;
+		pad: 0px;
 	}
 }
