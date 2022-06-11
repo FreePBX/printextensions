@@ -12,6 +12,7 @@ use FreePBX_Helpers;
 use BMO;
 
 include __DIR__ . '/vendor/autoload.php';
+require('PDF.php');
 
 class Printextensions extends \FreePBX_Helpers implements \BMO {
 	public function __construct($freepbx = null) {
@@ -62,12 +63,12 @@ class Printextensions extends \FreePBX_Helpers implements \BMO {
 				else
 				{
 					http_response_code(200);
-					header("Content-type: application/pdf");
-					header("Content-Disposition:attachment;filename='freepbx-extensions.pdf'");
-					
+
 					$names = explode(",", $_REQUEST['names']);
 					$pdf = $this->generatePdf($names);
-					$pdf->Output();
+					
+					$pdf->Output('I','freepbx-extensions.pdf', true);	//Open Pdf
+					//$pdf->Output('D','freepbx-extensions.pdf', true); //Force Download
 				}
 				exit();
 			break;
@@ -86,7 +87,6 @@ class Printextensions extends \FreePBX_Helpers implements \BMO {
 			'numdesc'  => _('Extension'),
 			'items'    => array(),
 		);
-		$featurecodes = \featurecodes_getAllFeaturesDetailed();
 		
 		foreach ($users as $user) {
 			$ret['items'][] = array($user[1],$user[0]);
@@ -125,32 +125,67 @@ class Printextensions extends \FreePBX_Helpers implements \BMO {
 
 	function generatePdf($names = array())
 	{
-		//Info: https://codigonaranja.com/como-crear-un-pdf-con-php-y-html
-		//	    https://www.kodetop.com/generar-archivos-pdf-con-php/
+		//Info: http://www.fpdf.org/
 
-		$ls_ext = \FreePBX::Printextensions()->getSections(false, true);
+		$ls_ext = $this->getSections(false, true);
 
-		$mpdf = new \Mpdf\Mpdf(['tempDir' => sys_get_temp_dir()]);
-		$mpdf->WriteHTML(sprintf('<h1>%s</h1>', _('FreePBX Extensions')));
+		$pdf = new \FreePBX\modules\Printextensions\PDF();
+		$pdf->AliasNbPages();
+		$pdf->AddPage();
+		$pdf->SetFont('Arial');
+
+		$max_width = 0;
+		foreach ($ls_ext as $k => $v)
+		{
+			if (! in_array($v['id'], $names))
+			{
+				continue;
+			}		
+			if (count($v['items']) == 0)
+			{
+				continue;
+			}
+
+			$pdf->SetFont('','B', 12);
+			foreach ($v['items'] as $item)
+			{
+				if (trim($item[1]) == "") {continue;}
+				$new_max = $pdf->GetStringWidth($item[1]);
+				if ($new_max > $max_width) {
+					$max_width = $new_max;
+				}
+			}
+		}
+		if ($max_width > 0) {
+			$max_width += 5;
+		}
 
 		foreach ($ls_ext as $k => $v)
 		{
 			if (! in_array($v['id'], $names)) { 
 				continue;
+			}		
+			$pdf->WriteTextUTF8($v['title'], 16, 'B', '', 7);
+
+			$pdf->SetFont('','', 12);
+			if (count($v['items']) == 0)
+			{
+				$pdf->WriteTextUTF8(_("Empty"), '' , 'B', '', 9);
 			}
-			
-			$mpdf->WriteHTML('<h3>'.$v['title'].'</h3>');
-			if (count($v['items']) == 0) {
-				$mpdf->WriteHTML('<b>'._("Empty").'</b>');
-			}
-			else {
-				foreach ($v['items'] as $item) {
+			else
+			{
+				foreach ($v['items'] as $item)
+				{
 					if (trim($item[1]) == "") {continue;}
-					$mpdf->WriteHTML(sprintf('<b>%s</b> - %s<br>', $item[1], $item[0]));
+
+					$pdf->SetFont('','B');
+					$pdf->Cell($max_width, 7, $item[1], 0);
+					$pdf->SetFont('','');
+					$pdf->MultiCell(0, 7, $pdf->fix_utf8($item[0]), 0, 'J');
 				}
 			}
-			$mpdf->WriteHTML('<br/>');
+			$pdf->Ln();
 		}
-		return $mpdf;
+		return $pdf;
 	}
 }

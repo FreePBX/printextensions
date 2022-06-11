@@ -15,6 +15,9 @@
 	<changelog>
 		*16.0.1* 16.0 
 	</changelog>
+  <depends>
+		<module>featurecodeadmin</module>
+	</depends>
   <location>release/2.11/printextensions-2.11.0.0.tgz</location>
   <md5sum>86a1a93e8a7a13affa3ae858a6c18c29</md5sum>
   <supported>
