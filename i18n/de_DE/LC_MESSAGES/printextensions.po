@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-31 14:50+0530\n"
+"POT-Creation-Date: 2022-06-15 04:51+0000\n"
 "PO-Revision-Date: 2018-06-26 13:58+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/printextensions/de/>\n"
@@ -28,21 +28,30 @@ msgstr ""
 "Erzeugt eine druckbare Liste aller Nebenstellennummern, die im System von "
 "Modulen genutzt werden, die eine interne anrufbare Nummer bereitstellen"
 
-#: page.printextensions.php:49
+#: page.printextensions.php:62
 msgid "Download PDF"
 msgstr "PDF herunterladen"
 
-#: Printextensions.class.php:33
+#: Printextensions.class.php:173 page.printextensions.php:28
+msgid "Empty"
+msgstr ""
+
+#: Printextensions.class.php:87
 msgid "Extension"
 msgstr "Nebenstelle"
 
-#: page.printextensions.php:6
+#: PDF.php:122 page.printextensions.php:6
 msgid "Extensions"
 msgstr "Nebenstellen"
 
-#: page.printextensions.php:56
-msgid "Print"
-msgstr "Drucken"
+#: page.printextensions.php:49
+msgid "Group Extensions to Print"
+msgstr ""
+
+#: PDF.php:130
+#, php-format
+msgid "Page %s/%s"
+msgstr ""
 
 #: printextensions.i18n.php:4 printextensions.i18n.php:10
 msgid "Print Extensions"
@@ -52,10 +61,17 @@ msgstr "Erweiterungen drucken"
 msgid "Reports"
 msgstr "Berichte"
 
-#: Printextensions.class.php:32
+#: assets/js/printextensions.js:18
+msgid "Skip, not selected data!"
+msgstr ""
+
+#: Printextensions.class.php:86
 msgid "User"
 msgstr "Benutzer"
 
-#: Printextensions.class.php:30
+#: Printextensions.class.php:85
 msgid "Users"
 msgstr "Benutzer"
+
+#~ msgid "Print"
+#~ msgstr "Drucken"

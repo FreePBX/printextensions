@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-31 14:50+0530\n"
+"POT-Creation-Date: 2022-06-15 04:51+0000\n"
 "PO-Revision-Date: 2018-05-30 10:02+0000\n"
 "Last-Translator: Stell0 <stefano.fancello@nethesis.it>\n"
 "Language-Team: Italian <http://*/projects/freepbx/printextensions/it/>\n"
@@ -28,21 +28,30 @@ msgstr ""
 "Crea un elenco stampabile di numeri di interno utilizzati in tutto il "
 "sistema da tutti i moduli che forniscono un numero callable interno"
 
-#: page.printextensions.php:49
+#: page.printextensions.php:62
 msgid "Download PDF"
 msgstr "Scarica il pdf"
 
-#: Printextensions.class.php:33
+#: Printextensions.class.php:173 page.printextensions.php:28
+msgid "Empty"
+msgstr ""
+
+#: Printextensions.class.php:87
 msgid "Extension"
 msgstr "Interno"
 
-#: page.printextensions.php:6
+#: PDF.php:122 page.printextensions.php:6
 msgid "Extensions"
 msgstr "Estensioni"
 
-#: page.printextensions.php:56
-msgid "Print"
-msgstr "Stampa"
+#: page.printextensions.php:49
+msgid "Group Extensions to Print"
+msgstr ""
+
+#: PDF.php:130
+#, php-format
+msgid "Page %s/%s"
+msgstr ""
 
 #: printextensions.i18n.php:4 printextensions.i18n.php:10
 msgid "Print Extensions"
@@ -52,13 +61,20 @@ msgstr "Stampa Interni"
 msgid "Reports"
 msgstr "Rapporti"
 
-#: Printextensions.class.php:32
+#: assets/js/printextensions.js:18
+msgid "Skip, not selected data!"
+msgstr ""
+
+#: Printextensions.class.php:86
 msgid "User"
 msgstr "Utente"
 
-#: Printextensions.class.php:30
+#: Printextensions.class.php:85
 msgid "Users"
 msgstr "Utenti"
+
+#~ msgid "Print"
+#~ msgstr "Stampa"
 
 #~ msgid "FreePBX Extension Layout"
 #~ msgstr "Layout Interni Centrale Telefonica"

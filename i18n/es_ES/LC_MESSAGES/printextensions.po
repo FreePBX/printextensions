@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: FreePBX - módulo printextensions module spanish "
 "translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-31 14:50+0530\n"
+"POT-Creation-Date: 2022-06-15 04:51+0000\n"
 "PO-Revision-Date: 2016-12-10 21:46+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/"
@@ -26,21 +26,30 @@ msgstr ""
 "Crea una lista imprimible de los números de extensión usados en el sistema "
 "para todos los módulos que proveen un numero interno destino valido"
 
-#: page.printextensions.php:49
+#: page.printextensions.php:62
 msgid "Download PDF"
 msgstr "Descargar PDF"
 
-#: Printextensions.class.php:33
+#: Printextensions.class.php:173 page.printextensions.php:28
+msgid "Empty"
+msgstr ""
+
+#: Printextensions.class.php:87
 msgid "Extension"
 msgstr "Extensión"
 
-#: page.printextensions.php:6
+#: PDF.php:122 page.printextensions.php:6
 msgid "Extensions"
 msgstr "Extensiones"
 
-#: page.printextensions.php:56
-msgid "Print"
-msgstr "Imprimir"
+#: page.printextensions.php:49
+msgid "Group Extensions to Print"
+msgstr ""
+
+#: PDF.php:130
+#, php-format
+msgid "Page %s/%s"
+msgstr ""
 
 #: printextensions.i18n.php:4 printextensions.i18n.php:10
 msgid "Print Extensions"
@@ -50,13 +59,20 @@ msgstr "Imprimir extensiones"
 msgid "Reports"
 msgstr "Reportes"
 
-#: Printextensions.class.php:32
+#: assets/js/printextensions.js:18
+msgid "Skip, not selected data!"
+msgstr ""
+
+#: Printextensions.class.php:86
 msgid "User"
 msgstr "Usuario"
 
-#: Printextensions.class.php:30
+#: Printextensions.class.php:85
 msgid "Users"
 msgstr "Usuarios"
+
+#~ msgid "Print"
+#~ msgstr "Imprimir"
 
 #~ msgid "Destination"
 #~ msgstr "Destino"

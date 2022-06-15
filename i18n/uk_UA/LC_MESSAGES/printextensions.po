@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-31 14:50+0530\n"
+"POT-Creation-Date: 2022-06-15 04:51+0000\n"
 "PO-Revision-Date: 2016-10-01 11:39+0200\n"
 "Last-Translator: Maxim <maxim@ua.fm>\n"
 "Language-Team: Ukrainian <http://weblate.freepbx.org/projects/freepbx/"
@@ -28,21 +28,30 @@ msgid ""
 "from all modules that provide an internal callable number"
 msgstr ""
 
-#: page.printextensions.php:49
+#: page.printextensions.php:62
 msgid "Download PDF"
 msgstr "Завантажити PDF"
 
-#: Printextensions.class.php:33
+#: Printextensions.class.php:173 page.printextensions.php:28
+msgid "Empty"
+msgstr ""
+
+#: Printextensions.class.php:87
 msgid "Extension"
 msgstr "Додатковий номер"
 
-#: page.printextensions.php:6
+#: PDF.php:122 page.printextensions.php:6
 msgid "Extensions"
 msgstr "Додаткові номери"
 
-#: page.printextensions.php:56
-msgid "Print"
-msgstr "Друкувати"
+#: page.printextensions.php:49
+msgid "Group Extensions to Print"
+msgstr ""
+
+#: PDF.php:130
+#, php-format
+msgid "Page %s/%s"
+msgstr ""
 
 #: printextensions.i18n.php:4 printextensions.i18n.php:10
 msgid "Print Extensions"
@@ -52,10 +61,17 @@ msgstr ""
 msgid "Reports"
 msgstr ""
 
-#: Printextensions.class.php:32
+#: assets/js/printextensions.js:18
+msgid "Skip, not selected data!"
+msgstr ""
+
+#: Printextensions.class.php:86
 msgid "User"
 msgstr "Користувач"
 
-#: Printextensions.class.php:30
+#: Printextensions.class.php:85
 msgid "Users"
 msgstr "Користувачі"
+
+#~ msgid "Print"
+#~ msgstr "Друкувати"
