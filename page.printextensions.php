@@ -5,55 +5,64 @@
 if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }
 $heading = $amp_conf['DASHBOARD_FREEPBX_BRAND'] . ' ' . _("Extensions");
 
+$ls_ext = \FreePBX::Printextensions()->getSections(false, true);
 ?>
-<style>
-@media print {
-  @page {
-    size: 330mm 427mm;
-    margin: 14mm;
-  }
-  .container {
-    width: 1170px;
-  }
-  h*{
-    display: block;
-  }
-  .alert{
-    display: none;
-  }
-  .fpbx-container {
-    display: block;
-    width: 100%;
-  }
-  #footer{
-    display: none;
-  }
-  .list-group-item{
-    padding: 2px;
-  }
-}
-</style>
 <div class="container-fluid">
 	<h1><?php echo $heading?></h1>
 	<div class = "display full-border">
 		<div class="row">
-			<div class="col-sm-9">
+			<div class="col-sm-9 list-extensions">
 				<div class="fpbx-container">
 					<div class="display full-border">
-						<?php echo \FreePBX::Printextensions()->getSections();?>
+						<div class="row holder">
+							<div class="col-sm-12">
+							<?php 
+								foreach ($ls_ext as $k => $v)
+								{
+									$sidediv[] = array('id'=> $v['id'] , 'title' => $v['title'], 'items' => $v['items']);
+
+									echo '<div class="row" id="'.$v['id'].'">';
+									echo '	<h3>'.$v['title'].'</h3>';
+									echo '	<ul class="list-group">';
+									if (count($v['items']) == 0) {
+										echo '<li class="list-group-item col-sm-6"><b>'._("Empty").'</b></li>';
+									}
+									else {
+										foreach ($v['items'] as $item) {
+											echo sprintf('<li class="list-group-item col-sm-6"><b>%s</b> - %s</li>', $item[1], $item[0]);
+										}
+									}
+									echo '	</ul>';
+									echo '	<br/><br/>';
+									echo '</div>';
+								}
+								?>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="col-sm-3 hidden-xs bootnav hidden-print">
-				<div class="list-group">
-					 <!--<a href="#" class="list-group-item clickable" id="pedl"><i class="fa fa-file-pdf-o"></i>&nbsp;<?php echo _("Download PDF")?></a>-->
-					 <?php $menuitems =  \FreePBX::Printextensions()->getSections(true);
-							echo '<ul>';
-					 foreach($menuitems as $seclectitem) {
-								echo '<li><input type="checkbox" value="'.$seclectitem['id'].'" name="module_'.$seclectitem['id'].'" id="module_'.$seclectitem['id'].'" class="disp_filter" checked=""><label id="lab_'.$seclectitem['id'].'" name="lab_'.$seclectitem['id'].'" for="'.$seclectitem['id'].'">'.$seclectitem['title'].'</label></li>';
-					 }echo '</ul>';
-					 ?>
-					 <a href="#" class="list-group-item clickable" onClick="$('#fpbxsearch').hide();window.print();$('#fpbxsearch').show();"><i class="fa fa-print"></i>&nbsp;<?php echo _("Print")?></a>
+				<div class="row">
+					<ul class="list-group">
+						<li class="list-group-item list-group-item-info">
+							<h2><?php echo _("Group Extensions to Print"); ?></h2>
+						</li>
+						<?php
+							foreach($ls_ext as $seclectitem)
+							{
+								echo '<li class="list-group-item">';
+								echo sprintf('<input type="checkbox" value="%1$s" name="module_%1$s" id="module_%1$s" class="disp_filter" checked=""><label id="lab_%1$s" name="lab_%1$s" for="%1$s">%2$s</label>', $seclectitem['id'], $seclectitem['title']);
+								echo '</li>';
+							}
+						?>
+
+						<li class="list-group-item list-group-item-success">
+							<a href="#" class="btn btn-block" id="btnPrintPdf">
+								<i class="fa fa-file-pdf-o"></i>&nbsp;<?php echo _("Download PDF")?>
+							</a>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>
