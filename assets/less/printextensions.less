@@ -1,15 +1,124 @@
 .holder {
 	margin: 5px;
-	.list-group-item {
-		border-radius: 0px;
-		background-color: rgba(93, 101, 99, 0.06);
-		border: 1px solid #ddd;
+	li.list-group-item {
+		border: 0px;
+		padding: 2px;
+		span.list-group-item {
+			background-color: rgba(93, 101, 99, 0.06);
+			border: 1px solid #ddd;
+		}
 	}
+	div {
+		padding-bottom: 15px;
+	}	
 }
 
-.bootnav {
-	h2 {
-		margin: 0px;
-		pad: 0px;
+.printextension_header
+{
+	.toolbar
+	{
+		.multiselect-container {
+			width: 100% !important;
+		}
+
+		/* background color */
+		.multiselect-container > .active > a, 
+		.multiselect-container > .active > a:hover, 
+		.multiselect-container > .active > a:focus {
+			background-color: #FFF !important;
+		}
+
+		/* text color */
+		.multiselect-container > li.active > a > label,
+		.multiselect-container > li.active > a:hover > label,
+		.multiselect-container > li.active > a:focus > label {
+			color: #000;
+		}
+
+
+		/* Fix: Removes the rounded edges from the radioset if it is not the first element in the group. */
+		.input-group-btn .radioset label
+		{
+			border-bottom-left-radius: 0 !important;
+			border-top-left-radius: 0 !important;
+		}
+
+
+				
+		/* 
+			Fix: New Skin FreePBX breaks the btn-group and input-group-btn
+		*/
+
+		/* Color Text and Icons */
+		.input-group-btn .btn-success,
+		.input-group-btn .btn-danger {
+			color: #fff !important;
+		}
+
+		/* Button Colors */
+		.input-group-btn .btn-success {
+			background-color: #5cb85c !important;
+			/* border-color: #5cb85c !important; */
+		}
+
+		.input-group-btn .btn-success:hover {
+			background-color: #218838 !important;
+			/* border-color: #1e7e34 !important; */
+		}
+
+		.input-group-btn .btn-danger  {
+			background-color: #d9534f !important;
+			/* border-color: #d9534f !important; */
+		}
+
+		.input-group-btn .btn-danger:hover {
+			background-color: #c82333 !important;
+			/* border-color: #bd2130 !important; */
+		}
+
+
+
+
+
+
+
+		.box-more-options
+		{
+			.dropdown-menu
+			{
+				li
+				{
+					margin: 6px 8px;
+				}
+				li > .input-group > .input-group-addon,
+				li > .input-group > input
+				{
+					font-size: 0.8em;
+				}
+				li > .input-group-radioset > .input-group-addon
+				{
+					width: 100%;
+				}		
+				li > .input-group-radioset .radioset > label
+				{
+					margin: 0px;
+				}
+
+
+				/* Fix: Remove border added on buttons and radioset. */
+				.btn {
+					border-color: #ccc !important;
+				}
+				.radioset label
+				{
+					border-color: #ccc !important;
+				}
+				.radioset label:last-child
+				{
+					border-left: 0px !important;
+				}
+			}
+			
+		}
 	}
 }
