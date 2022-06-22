@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX printextensions\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-15 04:51+0000\n"
+"POT-Creation-Date: 2022-06-22 10:39+0000\n"
 "PO-Revision-Date: 2008-10-12 15:07+0100\n"
 "Last-Translator: Mikael Carlsson <mickecamino@gmail.com>\n"
 "Language-Team: \n"
@@ -18,54 +18,113 @@ msgstr ""
 "X-Poedit-Language: Swedish\n"
 "X-Poedit-Country: SWEDEN\n"
 
+#: Printextensions.class.php:54 Printextensions.class.php:159
+#, php-format
+msgid "%s Extensions"
+msgstr ""
+
+#: Printextensions.class.php:150
+msgid "Command not found!"
+msgstr ""
+
 #: printextensions.i18n.php:8
 msgid ""
 "Creates a printable list of extension numbers used throughout the system "
 "from all modules that provide an internal callable number"
 msgstr ""
 
-#: page.printextensions.php:62
+#: views/view.extensions.header.php:70
+msgid "Date Format"
+msgstr ""
+
+#: views/view.extensions.header.php:76
+msgid "Date Print Alignment"
+msgstr ""
+
+#: views/view.extensions.header.php:2 views/view.extensions.header.php:30
 msgid "Download PDF"
 msgstr ""
 
-#: Printextensions.class.php:173 page.printextensions.php:28
+#: Printextensions.class.php:382 views/view.extensions.list.php:14
 msgid "Empty"
 msgstr ""
 
-#: Printextensions.class.php:87
+#: Printextensions.class.php:287
 msgid "Extension"
 msgstr "Anknytning/funktionskod"
 
-#: PDF.php:122 page.printextensions.php:6
-msgid "Extensions"
+#: views/view.extensions.header.php:67
+msgid "Footer"
 msgstr ""
 
-#: page.printextensions.php:49
-msgid "Group Extensions to Print"
+#: views/view.extensions.header.php:43
+msgid "Header"
 msgstr ""
 
-#: PDF.php:130
+#: Printextensions.class.php:123
+msgid "Missing data!"
+msgstr ""
+
+#: views/view.extensions.header.php:35
+msgid "More Options"
+msgstr ""
+
+#: PDF.php:143
 #, php-format
 msgid "Page %s/%s"
 msgstr ""
 
+#: Printextensions.class.php:59
+#, php-format
+msgid "Page Not Found (%s)!!!!"
+msgstr ""
+
+#: views/view.extensions.header.php:93
+msgid "Pagination Print Alignment"
+msgstr ""
+
 #: printextensions.i18n.php:4 printextensions.i18n.php:10
+#: views/page.extensions.list.php:2
 msgid "Print Extensions"
 msgstr "Skriv ut anknytningar"
+
+#: views/view.extensions.header.php:52
+msgid "Print Header on All Pages"
+msgstr ""
 
 #: printextensions.i18n.php:6
 msgid "Reports"
 msgstr ""
 
-#: assets/js/printextensions.js:18
-msgid "Skip, not selected data!"
+#: views/view.extensions.header.php:112 views/view.extensions.header.php:116
+msgid "Save Settings"
 msgstr ""
 
-#: Printextensions.class.php:86
+#: views/view.extensions.header.php:12
+msgid "Select Groups to Print"
+msgstr ""
+
+#: views/view.extensions.header.php:120 views/view.extensions.header.php:124
+msgid "Set Default Settings"
+msgstr ""
+
+#: Printextensions.class.php:129 Printextensions.class.php:141
+msgid "Successful Update"
+msgstr ""
+
+#: views/view.extensions.header.php:46
+msgid "Title"
+msgstr ""
+
+#: Printextensions.class.php:133 Printextensions.class.php:145
+msgid "Update process failed!"
+msgstr ""
+
+#: Printextensions.class.php:286
 msgid "User"
 msgstr ""
 
-#: Printextensions.class.php:85
+#: Printextensions.class.php:285
 msgid "Users"
 msgstr ""
 

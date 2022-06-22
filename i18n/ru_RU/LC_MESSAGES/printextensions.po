@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-15 04:51+0000\n"
+"POT-Creation-Date: 2022-06-22 10:39+0000\n"
 "PO-Revision-Date: 2021-12-08 06:04+0000\n"
 "Last-Translator: Dmitriy Q <krotesk@ya.ru>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/"
@@ -19,6 +19,15 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 3.0.1\n"
 
+#: Printextensions.class.php:54 Printextensions.class.php:159
+#, php-format
+msgid "%s Extensions"
+msgstr ""
+
+#: Printextensions.class.php:150
+msgid "Command not found!"
+msgstr ""
+
 #: printextensions.i18n.php:8
 msgid ""
 "Creates a printable list of extension numbers used throughout the system "
@@ -27,50 +36,103 @@ msgstr ""
 "Создает пригодный для печати список внутренних номеров, используемых в "
 "системе всеми модулями, на которые есть возможность позвонить"
 
-#: page.printextensions.php:62
+#: views/view.extensions.header.php:70
+msgid "Date Format"
+msgstr ""
+
+#: views/view.extensions.header.php:76
+msgid "Date Print Alignment"
+msgstr ""
+
+#: views/view.extensions.header.php:2 views/view.extensions.header.php:30
 msgid "Download PDF"
 msgstr "Скачать PDF"
 
-#: Printextensions.class.php:173 page.printextensions.php:28
+#: Printextensions.class.php:382 views/view.extensions.list.php:14
 msgid "Empty"
 msgstr ""
 
-#: Printextensions.class.php:87
+#: Printextensions.class.php:287
 msgid "Extension"
 msgstr "Внутренний номер"
 
-#: PDF.php:122 page.printextensions.php:6
-msgid "Extensions"
-msgstr "Внутренние номера"
-
-#: page.printextensions.php:49
-msgid "Group Extensions to Print"
+#: views/view.extensions.header.php:67
+msgid "Footer"
 msgstr ""
 
-#: PDF.php:130
+#: views/view.extensions.header.php:43
+msgid "Header"
+msgstr ""
+
+#: Printextensions.class.php:123
+msgid "Missing data!"
+msgstr ""
+
+#: views/view.extensions.header.php:35
+msgid "More Options"
+msgstr ""
+
+#: PDF.php:143
 #, php-format
 msgid "Page %s/%s"
 msgstr ""
 
+#: Printextensions.class.php:59
+#, php-format
+msgid "Page Not Found (%s)!!!!"
+msgstr ""
+
+#: views/view.extensions.header.php:93
+msgid "Pagination Print Alignment"
+msgstr ""
+
 #: printextensions.i18n.php:4 printextensions.i18n.php:10
+#: views/page.extensions.list.php:2
 msgid "Print Extensions"
 msgstr "Распечатать список внутренних номеров"
+
+#: views/view.extensions.header.php:52
+msgid "Print Header on All Pages"
+msgstr ""
 
 #: printextensions.i18n.php:6
 msgid "Reports"
 msgstr "Отчеты"
 
-#: assets/js/printextensions.js:18
-msgid "Skip, not selected data!"
+#: views/view.extensions.header.php:112 views/view.extensions.header.php:116
+msgid "Save Settings"
 msgstr ""
 
-#: Printextensions.class.php:86
+#: views/view.extensions.header.php:12
+msgid "Select Groups to Print"
+msgstr ""
+
+#: views/view.extensions.header.php:120 views/view.extensions.header.php:124
+msgid "Set Default Settings"
+msgstr ""
+
+#: Printextensions.class.php:129 Printextensions.class.php:141
+msgid "Successful Update"
+msgstr ""
+
+#: views/view.extensions.header.php:46
+msgid "Title"
+msgstr ""
+
+#: Printextensions.class.php:133 Printextensions.class.php:145
+msgid "Update process failed!"
+msgstr ""
+
+#: Printextensions.class.php:286
 msgid "User"
 msgstr "Пользователь"
 
-#: Printextensions.class.php:85
+#: Printextensions.class.php:285
 msgid "Users"
 msgstr "Пользователи"
+
+#~ msgid "Extensions"
+#~ msgstr "Внутренние номера"
 
 #~ msgid "Print"
 #~ msgstr "Печать"
