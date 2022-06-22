@@ -13,6 +13,12 @@ class PDF extends \FPDF
 	var $HREF='';
 	var $ALIGN='';
 
+	var $title 				= "Extensions";
+	var $header_all_pages 	= true;
+	var $date_format 		= "F j, Y";
+	var $align_date 		= "R";
+	var $align_pagination 	= "C";
+
 	function WriteHTML($html)
 	{
 		//HTML parser
@@ -114,21 +120,28 @@ class PDF extends \FPDF
 	
 	function Header()
 	{
+		if (! $this->header_all_pages) {
+			if ($this->PageNo() != 1) {
+				return;
+			}
+		}
+		
 		global $amp_conf;
 		// $this->Image($amp_conf['BRAND_IMAGE_TANGO_LEFT'], 10, 8, 22);
 		$this->Image($amp_conf['BRAND_IMAGE_FREEPBX_FOOT'], 5, 8, 50);
 		
 		$this->SetFont('Arial','B', 22);
-		$this->Cell(0,10, _('Extensions'),0,0,'R');
+		$this->Cell(0,10, $this->title,0,0,'R');
 		$this->Ln(20);
+		
 	}
 
 	function Footer()
 	{
 		$this->SetY(-15);
 		$this->SetFont('Arial','I',8);
-		$this->Cell(0,10, sprintf( _('Page %s/%s'), $this->PageNo(), '{nb}') ,0,0,'C');
-		$this->Cell(0,10, date("F j, Y")  ,0,0,'R');
+		$this->Cell(0,10, sprintf( _('Page %s/%s'), $this->PageNo(), '{nb}') ,0,0, $this->align_pagination);
+		$this->Cell(0,10, date($this->date_format)  ,0,0, $this->align_date);
 	}
 
 

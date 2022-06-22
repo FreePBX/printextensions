@@ -23,14 +23,43 @@ class Printextensions extends \FreePBX_Helpers implements \BMO {
 		$this->content = "";
 		$this->core = $freepbx->Core();
 		$this->hooks = $freepbx->Hooks();
+		$this->initConfigDefault();
 	}
-	public function install() {}
+	public function install() {
+		$this->initConfigDefault();
+	}
 	public function uninstall() {}
 	public function backup() {}
 	public function restore($backup) {}
 	public function doConfigPageInit($page) {
 	}
 
+	public function showPage($page, $params = array())
+	{
+		global $amp_conf;
+		$data = array(
+			"printextensions" => $this,
+			'request'	 	  => $_REQUEST,
+			'page' 		 	  => $page,
+			'amp_conf' 		  => $amp_conf,
+			'brand'			  => $amp_conf['DASHBOARD_FREEPBX_BRAND'],
+			'config'		  => $this->getConfigAll(),
+		);
+		$data = array_merge($data, $params);
+
+		switch ($page) 
+		{
+			case "printextensions":
+				$data['ls_ext'] = $this->getSections(false, true);
+				$data['heading'] = sprintf(_("%s Extensions"), $data['brand']);
+				$data_return = load_view(__DIR__."/views/page.extensions.list.php", $data);
+			break;
+
+			default:
+				$data_return = sprintf(_("Page Not Found (%s)!!!!"), $page);
+		}
+		return $data_return;
+	}
 
 	public function ajaxRequest($req, &$setting)
 	{
@@ -43,6 +72,8 @@ class Printextensions extends \FreePBX_Helpers implements \BMO {
 		switch($req)
 		{
 			case "getPdf":
+			case "settings_set":
+			case "settings_set_default":
 				return true;
 			break;
 		}
@@ -75,7 +106,176 @@ class Printextensions extends \FreePBX_Helpers implements \BMO {
 		}
 	}
 
-	public function ajaxHandler() {}
+	public function ajaxHandler()
+	{
+		$command = isset($_REQUEST['command']) ? trim($_REQUEST['command']) : '';
+
+		switch ($command)
+		{
+			case "getPdf":
+				exit();
+				break;
+
+			case "settings_set":
+				$settings = isset($_REQUEST['settings']) ? $_REQUEST['settings'] : NULL;
+				if ( empty($settings) )
+				{
+					$data_return = array("status" => false, "message" => _("Missing data!"));
+				}
+				else
+				{
+					if ($this->setConfigAll($settings))
+					{
+						$data_return = array("status" => true, "message" => _("Successful Update"));
+					} 
+					else
+					{
+						$data_return = array("status" => false, "message" => _("Update process failed!"));
+					}
+				}
+				break;
+
+			case "settings_set_default":
+				if ($this->setConfigAll($this->getConfigDefault()))
+				{
+					$data_return = array("status" => true, "message" => _("Successful Update"));
+				} 
+				else
+				{
+					$data_return = array("status" => false, "message" => _("Update process failed!"));
+				}
+				break;
+
+			defualt:
+				$data_return = array("status" => false, "message" => _("Command not found!"), "command" => $command);
+		}
+		return $data_return;
+	}
+
+	public function getConfigDefault()
+	{
+		global $amp_conf;
+		return array(
+			'header_title' => sprintf(_("%s Extensions"), $amp_conf['DASHBOARD_FREEPBX_BRAND']),
+			'header_all_pages' => 'Y',
+			'date_format' => 'F j, Y',
+			'align_date' => 'R',
+			'align_pagination' => 'L',
+		);
+	}
+
+	public function initConfigDefault()
+	{	
+		$data = $this->getAll('config');
+		if (empty($data)) {
+			$this->setConfigAll($this->getConfigAll());
+		}
+	}
+
+	public function getConfigAll()
+	{
+		$data_def = $this->getConfigDefault();
+
+		// Get data by DB
+		$data = $this->getAll('config');
+
+		// Add options default if not exist
+		foreach ($data_def as $key => $val)
+		{
+			if (! array_key_exists($key, $data))
+			{
+				$data[$key] = $val;
+			}
+		}
+
+		// Check value and set default if is not correct value
+		foreach ($data as $key => &$val)
+		{
+			$set_default = false;
+			switch($key) {
+				case 'header_title':
+					if (trim($val) === "") { $set_default = true; }
+					break;
+				case 'header_all_pages':
+					if (! in_array( trim(strtoupper($val)), array("Y", "N"))) { $set_default = true; }
+					break;
+
+				case 'date_format':
+					$now = date_create()->format($val);
+					if ((trim($val) === "") || (trim($now) === "")) { $set_default = true; }
+					break;
+
+				case 'align_date':
+				case 'align_pagination':
+					if (! in_array( trim(strtoupper($val)), array("L", "C", "R"))) { $set_default = true; }
+					break;
+			}
+
+			if ($set_default) {
+				$val = $data_def[$key];
+				// Save setting value fixed
+				$this->setConfigOpt($key, $val);
+			}
+		}
+		return $data;
+	}
+
+	public function getConfigOpt($opt = "")
+	{
+		$config 	 = $this->getConfigAll();
+		$data_return = null;
+
+		if ((! is_null($opt)) && (trim($opt) === ""))
+		{
+			$opt_fix = strtolower(trim($opt));
+			if (array_key_exists($opt_fix, $config)) {
+				$data_return = $config[$opt_fix];
+			}
+		}
+		return $data_return;
+	}
+
+	public function setConfigAll($data = array())
+	{
+		$data_def = $this->getConfigDefault();
+		foreach ($data as $key => $val)
+		{
+			$set_default = false;
+			switch($key) {
+				case 'header_title':
+					if (trim($val) === "") { $set_default = true; }
+					break;
+				case 'header_all_pages':
+					if (! in_array( trim(strtoupper($val)), array("Y", "N"))) { $set_default = true; }
+					break;
+
+				case 'date_format':
+					$now = date_create()->format($val);
+					if ((trim($val) === "") || (trim($now) === "")) { $set_default = true; }
+					break;
+
+				case 'align_date':
+				case 'align_pagination':
+					if (! in_array( trim(strtoupper($val)), array("L", "C", "R"))) { $set_default = true; }
+					break;
+			}
+
+			if ($set_default) {
+				$val = $data_def[$key];
+			}
+
+			$this->setConfigOpt($key, $val);
+		}
+		return true;
+	}
+
+	public function setConfigOpt($key = null, $val = null) {
+		$this->setConfig($key, $val, "config");
+	}
+
+
+	
+
 
 	public function getSections($sidebar=false, $show_all = false, $sort = true) {
 		$sections = array();
@@ -128,8 +328,17 @@ class Printextensions extends \FreePBX_Helpers implements \BMO {
 		//Info: http://www.fpdf.org/
 
 		$ls_ext = $this->getSections(false, true);
+		$conf = $this->getConfigAll();
 
 		$pdf = new \FreePBX\modules\Printextensions\PDF();
+		
+		$pdf->title 			= $conf['header_title'];
+		$pdf->header_all_pages 	= $conf['header_all_pages'] == "Y" ? true : false;
+		$pdf->date_format 		= $conf['date_format'];
+		$pdf->align_date 		= $conf['align_date'];
+		$pdf->align_pagination 	= $conf['align_pagination'];
+
+
 		$pdf->AliasNbPages();
 		$pdf->AddPage();
 		$pdf->SetFont('Arial');
