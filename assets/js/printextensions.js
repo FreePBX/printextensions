@@ -4,7 +4,7 @@ $(document).ready(function() {
 	// https://www.codehim.com/demo/bootstrap-multiselect-dropdown/    
     $(id_ls_gropus).multiselect({
         buttonWidth: '100%',
-        includeSelectAllOption: true,
+        // includeSelectAllOption: true,
         selectAllNumber: false,
         disableIfEmpty: true,
         inheritClass: true,
