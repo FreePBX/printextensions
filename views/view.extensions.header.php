@@ -13,7 +13,7 @@
                             </div>
                             <div class="col-md-9">
                                 <select class="form-control" id="ls_groups_extensions" multiple="multiple" style="display: none;">
-                                <option role="separator" class="divider" disabled>&nbsp;</option>
+                                <!-- <option role="separator" class="divider" disabled>&nbsp;</option> -->
                                 <?php
                                     foreach($ls_ext as $seclectitem)
                                     {
