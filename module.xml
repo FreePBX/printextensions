@@ -2,7 +2,7 @@
   <rawname>printextensions</rawname>
   <repo>standard</repo>
   <name>Print Extensions</name>
-  <version>16.0.3</version>
+  <version>16.0.4</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -13,6 +13,7 @@
     <printextensions>Print Extensions</printextensions>
   </menuitems>
 	<changelog>
+		*16.0.4* FREEPBX-23567 and Adding Backup and Restore support 
 		*16.0.3* FREEPBX-23566 
 		*16.0.2* FREEPBX-23521 
 		*16.0.1* 16.0

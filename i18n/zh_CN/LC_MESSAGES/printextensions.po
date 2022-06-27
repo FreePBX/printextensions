@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-22 10:39+0000\n"
+"POT-Creation-Date: 2022-06-27 04:35+0000\n"
 "PO-Revision-Date: 2009-02-01 12:49+0800\n"
 "Last-Translator: 周征晟 <zhougongjizhe@163.com>\n"
 "Language-Team: EdwardBadBoy <zhougongjizhe@163.com>\n"
@@ -107,6 +107,10 @@ msgstr ""
 
 #: views/view.extensions.header.php:120 views/view.extensions.header.php:124
 msgid "Set Default Settings"
+msgstr ""
+
+#: assets/js/printextensions.js:45
+msgid "Skip, not selected data!"
 msgstr ""
 
 #: Printextensions.class.php:129 Printextensions.class.php:141

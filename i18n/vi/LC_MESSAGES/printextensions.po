@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-22 10:39+0000\n"
+"POT-Creation-Date: 2022-06-27 04:35+0000\n"
 "PO-Revision-Date: 2017-07-11 16:47+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/"
@@ -111,6 +111,10 @@ msgstr ""
 
 #: views/view.extensions.header.php:120 views/view.extensions.header.php:124
 msgid "Set Default Settings"
+msgstr ""
+
+#: assets/js/printextensions.js:45
+msgid "Skip, not selected data!"
 msgstr ""
 
 #: Printextensions.class.php:129 Printextensions.class.php:141
