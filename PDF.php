@@ -140,10 +140,58 @@ class PDF extends \FPDF
 	{
 		$this->SetY(-15);
 		$this->SetFont('Arial','I',8);
-		$this->Cell(0,10, sprintf( _('Page %s/%s'), $this->PageNo(), '{nb}') ,0,0, $this->align_pagination);
-		$this->Cell(0,10, date($this->date_format)  ,0,0, $this->align_date);
+		if (strtoupper($this->align_pagination) == strtoupper($this->align_date))
+		{
+			$this->Cell(0,10, sprintf( _('%s - Page %s/%s'), date($this->date_format), $this->PageNo(), '{nb}') , 0, 0, $this->align_pagination);
+		}
+		else
+		{
+			$sizeTab = $this->GetLineWidth() / 3;
+			$txtL = "";
+			$txtC = "";
+			$txtR = "";
+
+			$txtPagination = sprintf( _('Page %s/%s'), $this->PageNo(), '{nb}');
+			$txtDate =  date($this->date_format);
+
+			switch(strtoupper($this->align_pagination))
+			{
+				case "":
+				case "L":
+					$txtL = $txtPagination;
+					break;
+				case "C":
+					$txtC = $txtPagination;
+					break;
+				case "R":
+					$txtR = $txtPagination;
+				break;
+			}
+
+			switch(strtoupper($this->align_date))
+			{
+				case "":
+				case "L":
+					$txtL = $txtDate;
+					break;
+				case "C":
+					$txtC = $txtDate;
+					break;
+				case "R":
+					$txtR = $txtDate;
+				break;
+			}
+
+			$this->Cell($sizeTab, 10, $txtL, 0, 0, "L");
+			$this->Cell($sizeTab, 10, $txtC, 0, 0, "C");
+			$this->Cell($sizeTab, 10, $txtR, 0, 0, "R");	
+		}
 	}
 
+	function GetLineWidth () {
+		$w = $this->w - $this->lMargin - $this->rMargin;
+		return $w;
+	}
 
 	function WriteTextUTF8($text, $size='', $style='', $font='', $size_newline='')
 	{
