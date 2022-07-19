@@ -11,7 +11,7 @@
                             <div class="col-md-2">
                                 <label class="control-label" for="ls_groups_extensions"><?php echo _("Select Groups to Print"); ?></label>
                             </div>
-                            <div class="col-md-9">
+                            <div class="col-md-8">
                                 <select class="form-control" id="ls_groups_extensions" multiple="multiple" style="display: none;">
                                 <!-- <option role="separator" class="divider" disabled>&nbsp;</option> -->
                                 <?php
@@ -22,11 +22,10 @@
                                 ?>
                                 </select>
                             </div>
-                            <div class="col-md-1">
+                            <div class="col-md-2">
                                 <div class="box-more-options dropdown">
-
                                     <form id="form_more_options">
-                                    <div class="btn-group">
+                                    <div class="btn-group btn-group-block">
                                         <button type="button" class="btn btn-success" title="<?php echo _("Download PDF"); ?>" id="btnPrintPdf">
                                             <span>
                                                 <i class="fa fa-file-pdf-o"></i>
@@ -125,15 +124,8 @@
                                                 </button>
                                             </li>
                                         </ul>
-                                        
                                     </div>
                                     </form>
-
-
-
-
-                                    
-
                                 </div>
                             </div>
                         </div>
