@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-19 08:57+0000\n"
+"POT-Creation-Date: 2022-07-19 08:58+0000\n"
 "PO-Revision-Date: 2017-12-01 16:12+0200\n"
 "Last-Translator: jeremie <jeremie@famillecattan.com>\n"
 "Language-Team: French <http://weblate.freepbx.org/projects/freepbx/"
@@ -13,6 +13,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 2.4\n"
+
+#: PDF.php:145
+#, php-format
+msgid "%s - Page %s/%s"
+msgstr ""
 
 #: Printextensions.class.php:54 Printextensions.class.php:159
 #, php-format
@@ -67,7 +72,7 @@ msgstr ""
 msgid "More Options"
 msgstr ""
 
-#: PDF.php:143
+#: PDF.php:154
 #, php-format
 msgid "Page %s/%s"
 msgstr ""

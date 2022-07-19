@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-19 08:57+0000\n"
+"POT-Creation-Date: 2022-07-19 08:58+0000\n"
 "PO-Revision-Date: 2017-07-11 16:47+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/"
@@ -20,6 +20,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 2.4\n"
+
+#: PDF.php:145
+#, php-format
+msgid "%s - Page %s/%s"
+msgstr ""
 
 #: Printextensions.class.php:54 Printextensions.class.php:159
 #, php-format
@@ -74,7 +79,7 @@ msgstr ""
 msgid "More Options"
 msgstr ""
 
-#: PDF.php:143
+#: PDF.php:154
 #, php-format
 msgid "Page %s/%s"
 msgstr ""

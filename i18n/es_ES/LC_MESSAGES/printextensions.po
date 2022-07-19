@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: FreePBX - módulo printextensions module spanish "
 "translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-19 08:57+0000\n"
+"POT-Creation-Date: 2022-07-19 08:58+0000\n"
 "PO-Revision-Date: 2016-12-10 21:46+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/"
@@ -17,6 +17,11 @@ msgstr ""
 "X-Poedit-Language: Spanish\n"
 "X-Poedit-Country: SPAIN\n"
 "X-Poedit-SourceCharset: utf-8\n"
+
+#: PDF.php:145
+#, php-format
+msgid "%s - Page %s/%s"
+msgstr ""
 
 #: Printextensions.class.php:54 Printextensions.class.php:159
 #, php-format
@@ -71,7 +76,7 @@ msgstr ""
 msgid "More Options"
 msgstr ""
 
-#: PDF.php:143
+#: PDF.php:154
 #, php-format
 msgid "Page %s/%s"
 msgstr ""
