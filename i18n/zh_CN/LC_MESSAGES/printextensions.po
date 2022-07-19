@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-27 04:35+0000\n"
+"POT-Creation-Date: 2022-07-19 08:57+0000\n"
 "PO-Revision-Date: 2009-02-01 12:49+0800\n"
 "Last-Translator: 周征晟 <zhougongjizhe@163.com>\n"
 "Language-Team: EdwardBadBoy <zhougongjizhe@163.com>\n"
@@ -34,15 +34,15 @@ msgid ""
 "from all modules that provide an internal callable number"
 msgstr ""
 
-#: views/view.extensions.header.php:70
+#: views/view.extensions.header.php:69
 msgid "Date Format"
 msgstr ""
 
-#: views/view.extensions.header.php:76
+#: views/view.extensions.header.php:75
 msgid "Date Print Alignment"
 msgstr ""
 
-#: views/view.extensions.header.php:2 views/view.extensions.header.php:30
+#: views/view.extensions.header.php:2 views/view.extensions.header.php:29
 msgid "Download PDF"
 msgstr ""
 
@@ -54,11 +54,11 @@ msgstr ""
 msgid "Extension"
 msgstr "分机号"
 
-#: views/view.extensions.header.php:67
+#: views/view.extensions.header.php:66
 msgid "Footer"
 msgstr ""
 
-#: views/view.extensions.header.php:43
+#: views/view.extensions.header.php:42
 msgid "Header"
 msgstr ""
 
@@ -66,7 +66,7 @@ msgstr ""
 msgid "Missing data!"
 msgstr ""
 
-#: views/view.extensions.header.php:35
+#: views/view.extensions.header.php:34
 msgid "More Options"
 msgstr ""
 
@@ -80,7 +80,7 @@ msgstr ""
 msgid "Page Not Found (%s)!!!!"
 msgstr ""
 
-#: views/view.extensions.header.php:93
+#: views/view.extensions.header.php:92
 msgid "Pagination Print Alignment"
 msgstr ""
 
@@ -89,7 +89,7 @@ msgstr ""
 msgid "Print Extensions"
 msgstr "分机一览"
 
-#: views/view.extensions.header.php:52
+#: views/view.extensions.header.php:51
 msgid "Print Header on All Pages"
 msgstr ""
 
@@ -97,7 +97,7 @@ msgstr ""
 msgid "Reports"
 msgstr "报表"
 
-#: views/view.extensions.header.php:112 views/view.extensions.header.php:116
+#: views/view.extensions.header.php:111 views/view.extensions.header.php:115
 msgid "Save Settings"
 msgstr ""
 
@@ -105,7 +105,7 @@ msgstr ""
 msgid "Select Groups to Print"
 msgstr ""
 
-#: views/view.extensions.header.php:120 views/view.extensions.header.php:124
+#: views/view.extensions.header.php:119 views/view.extensions.header.php:123
 msgid "Set Default Settings"
 msgstr ""
 
@@ -117,7 +117,7 @@ msgstr ""
 msgid "Successful Update"
 msgstr ""
 
-#: views/view.extensions.header.php:46
+#: views/view.extensions.header.php:45
 msgid "Title"
 msgstr ""
 
