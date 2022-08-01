@@ -1,12 +1,11 @@
 <div class="panel panel-primary">
     <div class="panel-heading"><b><?php echo _("Download PDF") ?></b></div>
     <div class="panel-body">
-
         <div class="element-container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="row toolbar">
-                        <div class="form-group">
+                    <div class=" toolbar">
+                        <div class="form-group row">
 
                             <div class="col-md-2">
                                 <label class="control-label" for="ls_groups_extensions"><?php echo _("Select Groups to Print"); ?></label>
@@ -27,14 +26,10 @@
                                     <form id="form_more_options">
                                     <div class="btn-group btn-group-block">
                                         <button type="button" class="btn btn-success" title="<?php echo _("Download PDF"); ?>" id="btnPrintPdf">
-                                            <span>
-                                                <i class="fa fa-file-pdf-o"></i>
-                                            </span>
+                                            <span><i class="fa fa-file-pdf-o"></i></span>
                                         </button>
                                         <button type="button" class="btn btn-default dropdown-toggle" id="dropdownMenuMoreOptions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="<?php echo _("More Options"); ?>">
-                                            <span>
-                                                <i class="fa fa-cogs" aria-hidden="true"></i>
-                                            </span>
+                                            <span><i class="fa fa-cogs" aria-hidden="true"></i></span>
                                             <span class="caret"></span>
                                         </button>
                                         
@@ -42,35 +37,40 @@
                                             <li><b><?php echo _("Header") ?></b></li>
                                             <li>
                                                 <div class="input-group">
-                                                    <span class="input-group-addon" from="header_title"><?php echo _("Title"); ?></span>
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text" from="header_title"><?php echo _("Title"); ?></span>
+                                                    </div>
                                                     <input type="text" id="header_title" name="header_title" class="form-control" value="<?php echo $config['header_title'] ?>">
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="input-group input-group-radioset">
-                                                    <span class="input-group-addon"><?php echo _("Print Header in Page"); ?></span>
+                                                    <span class="input-group-addon flex-fill"><?php echo _("Print Header in Page"); ?></span>
                                                     <div class="input-group-btn">
                                                         <div class="radioset">
-                                                        <input type="radio" name="header_all_pages" id="header_all_pages_n" value="N" <?php echo $config['header_all_pages'] != "Y" ? "checked" : "" ?>>
-                                                            <label for="header_all_pages_n"><?php echo _("Only First") ?></label>
+                                                            <input type="radio" name="header_all_pages" id="header_all_pages_n" value="N" <?php echo $config['header_all_pages'] != "Y" ? "checked" : "" ?>>
+                                                            <label for="header_all_pages_n" class="header_all_pages"><?php echo _("Only First") ?></label>
                                                             <input type="radio" name="header_all_pages" id="header_all_pages_y" value="Y" <?php echo $config['header_all_pages'] == "Y" ? "checked" : "" ?>>
-                                                            <label for="header_all_pages_y"><?php echo _("All") ?></label>
+                                                            <label for="header_all_pages_y" class="header_all_pages"><?php echo _("All") ?></label>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </li>
 
-                                            <li role="separator" class="divider"></li>
+                                            <li class="dropdown-divider"></li>
+
                                             <li><b><?php echo _("Footer") ?></b></li>
                                             <li>
                                                 <div class="input-group">
-                                                    <span class="input-group-addon" from="date_format"><?php echo _("Date Format"); ?></span>
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text" from="date_format"><?php echo _("Date Format"); ?></span>
+                                                    </div>
                                                     <input type="text" id="date_format" name="date_format" class="form-control" value="<?php echo $config['date_format'] ?>">
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="input-group input-group-radioset">
-                                                    <span class="input-group-addon"><?php echo _("Date Print Alignment"); ?></span>
+                                                    <span class="input-group-addon flex-fill"><?php echo _("Date Print Alignment"); ?></span>
                                                     <div class="input-group-btn">
                                                         <div class="radioset">
                                                             <input type="radio" name="align_date" id="align_date_l" value="L" <?php echo $config['align_date'] == "L" ? "checked" : "" ?>>
@@ -87,7 +87,7 @@
                                             </li>
                                             <li>
                                                 <div class="input-group input-group-radioset">
-                                                    <span class="input-group-addon"><?php echo _("Pagination Print Alignment"); ?></span>
+                                                    <span class="input-group-addon flex-fill"><?php echo _("Pagination Print Alignment"); ?></span>
                                                     <div class="input-group-btn">
                                                         <div class="radioset">
                                                             <input type="radio" name="align_pagination" id="align_pagination_l" value="L" <?php echo $config['align_pagination'] == "L" ? "checked" : "" ?>>
@@ -102,26 +102,19 @@
                                                     </div>
                                                 </div>
                                             </li>
-
-                                            <li role="separator" class="divider"></li>
-
+                                            <li class="dropdown-divider"></li>
                                             <li>
                                                 <button type="button" class="btn btn-success btn-block" title="<?php echo _("Save Settings"); ?>" id="btn_save_settings">
-                                                    <span>
-                                                        <i class="fa fa-floppy-o"></i>
-                                                    </span>
+                                                    <span><i class="fa fa-floppy-o"></i></span>
                                                     <?php echo _("Save Settings") ?>
                                                 </button>
-                                            </li>
-                                            <li>
                                                 <button type="button" class="btn btn-danger btn-block" title="<?php echo _("Set Default Settings"); ?>" id="btn_set_default_settings">
-                                                    <span>
-                                                        <i class="fa fa-undo"></i>
-                                                    </span>
+                                                    <span><i class="fa fa-undo"></i></span>
                                                     <?php echo _("Set Default Settings") ?>
                                                 </button>
                                             </li>
                                         </ul>
+                                        
                                     </div>
                                     </form>
                                 </div>
