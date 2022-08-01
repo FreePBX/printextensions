@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-19 08:58+0000\n"
+"POT-Creation-Date: 2022-08-01 04:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,6 +39,14 @@ msgstr ""
 msgid "%s Extensions"
 msgstr ""
 
+#: views/view.extensions.header.php:57
+msgid "All"
+msgstr ""
+
+#: assets/js/printextensions.js:11
+msgid "All Selected"
+msgstr ""
+
 #: Printextensions.class.php:150
 msgid "Command not found!"
 msgstr ""
@@ -49,11 +57,11 @@ msgid ""
 "from all modules that provide an internal callable number"
 msgstr ""
 
-#: views/view.extensions.header.php:69
+#: views/view.extensions.header.php:67
 msgid "Date Format"
 msgstr ""
 
-#: views/view.extensions.header.php:75
+#: views/view.extensions.header.php:73
 msgid "Date Print Alignment"
 msgstr ""
 
@@ -69,7 +77,7 @@ msgstr ""
 msgid "Extension"
 msgstr ""
 
-#: views/view.extensions.header.php:66
+#: views/view.extensions.header.php:64
 msgid "Footer"
 msgstr ""
 
@@ -85,6 +93,10 @@ msgstr ""
 msgid "More Options"
 msgstr ""
 
+#: views/view.extensions.header.php:55
+msgid "Only First"
+msgstr ""
+
 #: PDF.php:154
 #, php-format
 msgid "Page %s/%s"
@@ -95,7 +107,7 @@ msgstr ""
 msgid "Page Not Found (%s)!!!!"
 msgstr ""
 
-#: views/view.extensions.header.php:92
+#: views/view.extensions.header.php:90
 msgid "Pagination Print Alignment"
 msgstr ""
 
@@ -105,14 +117,14 @@ msgid "Print Extensions"
 msgstr ""
 
 #: views/view.extensions.header.php:51
-msgid "Print Header on All Pages"
+msgid "Print Header in Page"
 msgstr ""
 
 #: printextensions.i18n.php:6
 msgid "Reports"
 msgstr ""
 
-#: views/view.extensions.header.php:111 views/view.extensions.header.php:115
+#: views/view.extensions.header.php:109 views/view.extensions.header.php:113
 msgid "Save Settings"
 msgstr ""
 
@@ -120,11 +132,11 @@ msgstr ""
 msgid "Select Groups to Print"
 msgstr ""
 
-#: views/view.extensions.header.php:119 views/view.extensions.header.php:123
+#: views/view.extensions.header.php:117 views/view.extensions.header.php:121
 msgid "Set Default Settings"
 msgstr ""
 
-#: assets/js/printextensions.js:45
+#: assets/js/printextensions.js:46
 msgid "Skip, not selected data!"
 msgstr ""
 
