@@ -48,15 +48,13 @@
                                             </li>
                                             <li>
                                                 <div class="input-group input-group-radioset">
-                                                    <span class="input-group-addon"><?php echo _("Print Header on All Pages"); ?></span>
+                                                    <span class="input-group-addon"><?php echo _("Print Header in Page"); ?></span>
                                                     <div class="input-group-btn">
                                                         <div class="radioset">
+                                                        <input type="radio" name="header_all_pages" id="header_all_pages_n" value="N" <?php echo $config['header_all_pages'] != "Y" ? "checked" : "" ?>>
+                                                            <label for="header_all_pages_n"><?php echo _("Only First") ?></label>
                                                             <input type="radio" name="header_all_pages" id="header_all_pages_y" value="Y" <?php echo $config['header_all_pages'] == "Y" ? "checked" : "" ?>>
-                                                            <label for="header_all_pages_y"><i class="fa fa-check-circle" aria-hidden="true"></i></label>
-
-                                                            <input type="radio" name="header_all_pages" id="header_all_pages_n" value="N" <?php echo $config['header_all_pages'] != "Y" ? "checked" : "" ?>>
-                                                            <label for="header_all_pages_n"><i class="fa fa-times-circle" aria-hidden="true"></i></label>
-
+                                                            <label for="header_all_pages_y"><?php echo _("All") ?></label>
                                                         </div>
                                                     </div>
                                                 </div>

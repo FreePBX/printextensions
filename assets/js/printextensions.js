@@ -8,6 +8,7 @@ $(document).ready(function() {
         selectAllNumber: false,
         disableIfEmpty: true,
         inheritClass: true,
+        allSelectedText: _('All Selected'),
         onChange: function(option, checked)
         {
             if (option != undefined)
