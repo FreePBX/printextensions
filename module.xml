@@ -2,7 +2,7 @@
   <rawname>printextensions</rawname>
   <repo>standard</repo>
   <name>Print Extensions</name>
-  <version>16.0.7</version>
+  <version>17.0.1</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -13,13 +13,7 @@
     <printextensions>Print Extensions</printextensions>
   </menuitems>
 	<changelog>
-		*16.0.7* FREEPBX-23566 
-		*16.0.6* FREEPBX-23612 fix problem printing footer, problem with positions 
-		*16.0.5* FREEPBX-23613 fix button group breaks when shrinking window 
-		*16.0.4* FREEPBX-23567 and Adding Backup and Restore support 
-		*16.0.3* FREEPBX-23566 
-		*16.0.2* FREEPBX-23521 
-		*16.0.1* 16.0
+		*17.0.1* 17.0
 	</changelog>
   <depends>
 		<module>featurecodeadmin</module>
@@ -27,6 +21,6 @@
   <location>release/2.11/printextensions-2.11.0.0.tgz</location>
   <md5sum>86a1a93e8a7a13affa3ae858a6c18c29</md5sum>
   <supported>
-    <version>16.0</version>
+    <version>17.0</version>
   </supported>
 </module>
