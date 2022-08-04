@@ -1,11 +1,12 @@
 .holder {
 	margin: 5px;
-	li.list-group-item {
+	li.list-item {
 		border: 0px;
 		padding: 2px;
-		span.list-group-item {
-			background-color: rgba(93, 101, 99, 0.06);
-			border: 1px solid #ddd;
+ 		span.list-group-item {
+ 			background-color: rgba(93, 101, 99, 0.06);
+ 			border: 1px solid #ddd;
+			border-radius: 20px;
 		}
 	}
 	div {
@@ -95,24 +96,22 @@
 		{
 			.dropdown-menu
 			{
+				min-width: 400px;
 				li
 				{
 					margin: 6px 8px;
 				}
-				li > .input-group > .input-group-addon,
-				li > .input-group > input
+				li > .input-group
 				{
-					font-size: 0.8em;
-				}
-				li > .input-group-radioset > .input-group-addon
-				{
-					width: 100%;
-				}		
-				li > .input-group-radioset .radioset > label
-				{
-					margin: 0px;
-				}
+					.input-group-text, .input-group-addon, input
+					{
+						font-size: 0.8em;
+					}
 
+					label.header_all_pages {
+						font-size: 0.9em;
+					}
+				}
 
 				/* Fix: Remove border added on buttons and radioset. */
 				.btn {
@@ -122,12 +121,7 @@
 				{
 					border-color: #ccc !important;
 				}
-				.radioset label:last-child
-				{
-					border-left: 0px !important;
-				}
-			}
-			
+			}			
 		}
 	}
 }
