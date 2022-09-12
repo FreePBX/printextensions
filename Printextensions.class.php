@@ -21,7 +21,6 @@ class Printextensions extends \FreePBX_Helpers implements \BMO {
 		}
 		$this->FreePBX = $freepbx;
 		$this->content = "";
-		$this->core = $freepbx->Core();
 		$this->hooks = $freepbx->Hooks();
 		$this->initConfigDefault();
 	}
@@ -280,7 +279,7 @@ class Printextensions extends \FreePBX_Helpers implements \BMO {
 	public function getSections($sidebar=false, $show_all = false, $sort = true) {
 		$sections = array();
 		$sidediv = array();
-		$users = $this->core->listUsers(true);
+		$users = $this->FreePBX->Core->listUsers(true);
 		$ret = array(
 			'title'    => _("Users"),
 			'textdesc' => _('User'),
