@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-01 04:09+0000\n"
+"POT-Creation-Date: 2022-09-12 11:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,7 +34,7 @@ msgstr ""
 msgid "%s - Page %s/%s"
 msgstr ""
 
-#: Printextensions.class.php:54 Printextensions.class.php:159
+#: Printextensions.class.php:53 Printextensions.class.php:158
 #, php-format
 msgid "%s Extensions"
 msgstr ""
@@ -47,7 +47,7 @@ msgstr ""
 msgid "All Selected"
 msgstr ""
 
-#: Printextensions.class.php:150
+#: Printextensions.class.php:149
 msgid "Command not found!"
 msgstr ""
 
@@ -69,11 +69,11 @@ msgstr ""
 msgid "Download PDF"
 msgstr ""
 
-#: Printextensions.class.php:382 views/view.extensions.list.php:14
+#: Printextensions.class.php:381 views/view.extensions.list.php:14
 msgid "Empty"
 msgstr ""
 
-#: Printextensions.class.php:287
+#: Printextensions.class.php:286
 msgid "Extension"
 msgstr ""
 
@@ -85,7 +85,7 @@ msgstr ""
 msgid "Header"
 msgstr ""
 
-#: Printextensions.class.php:123
+#: Printextensions.class.php:122
 msgid "Missing data!"
 msgstr ""
 
@@ -102,7 +102,7 @@ msgstr ""
 msgid "Page %s/%s"
 msgstr ""
 
-#: Printextensions.class.php:59
+#: Printextensions.class.php:58
 #, php-format
 msgid "Page Not Found (%s)!!!!"
 msgstr ""
@@ -140,7 +140,7 @@ msgstr ""
 msgid "Skip, not selected data!"
 msgstr ""
 
-#: Printextensions.class.php:129 Printextensions.class.php:141
+#: Printextensions.class.php:128 Printextensions.class.php:140
 msgid "Successful Update"
 msgstr ""
 
@@ -148,14 +148,14 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: Printextensions.class.php:133 Printextensions.class.php:145
+#: Printextensions.class.php:132 Printextensions.class.php:144
 msgid "Update process failed!"
 msgstr ""
 
-#: Printextensions.class.php:286
+#: Printextensions.class.php:285
 msgid "User"
 msgstr ""
 
-#: Printextensions.class.php:285
+#: Printextensions.class.php:284
 msgid "Users"
 msgstr ""
