@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-12 11:26+0000\n"
+"POT-Creation-Date: 2024-02-27 04:49-0500\n"
 "PO-Revision-Date: 2021-12-08 06:04+0000\n"
 "Last-Translator: Dmitriy Q <krotesk@ya.ru>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/"
@@ -15,8 +15,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 3.0.1\n"
 
 #: PDF.php:145
@@ -29,7 +29,7 @@ msgstr ""
 msgid "%s Extensions"
 msgstr ""
 
-#: views/view.extensions.header.php:57
+#: views/view.extensions.header.php:54
 msgid "All"
 msgstr ""
 
@@ -49,7 +49,7 @@ msgstr ""
 "Создает пригодный для печати список внутренних номеров, используемых в "
 "системе всеми модулями, на которые есть возможность позвонить"
 
-#: views/view.extensions.header.php:67
+#: views/view.extensions.header.php:66
 msgid "Date Format"
 msgstr ""
 
@@ -57,11 +57,11 @@ msgstr ""
 msgid "Date Print Alignment"
 msgstr ""
 
-#: views/view.extensions.header.php:2 views/view.extensions.header.php:29
+#: views/view.extensions.header.php:2 views/view.extensions.header.php:28
 msgid "Download PDF"
 msgstr "Скачать PDF"
 
-#: Printextensions.class.php:381 views/view.extensions.list.php:14
+#: Printextensions.class.php:381 views/view.extensions.list.php:21
 msgid "Empty"
 msgstr ""
 
@@ -69,11 +69,11 @@ msgstr ""
 msgid "Extension"
 msgstr "Внутренний номер"
 
-#: views/view.extensions.header.php:64
+#: views/view.extensions.header.php:62
 msgid "Footer"
 msgstr ""
 
-#: views/view.extensions.header.php:42
+#: views/view.extensions.header.php:37
 msgid "Header"
 msgstr ""
 
@@ -81,11 +81,11 @@ msgstr ""
 msgid "Missing data!"
 msgstr ""
 
-#: views/view.extensions.header.php:34
+#: views/view.extensions.header.php:31
 msgid "More Options"
 msgstr ""
 
-#: views/view.extensions.header.php:55
+#: views/view.extensions.header.php:52
 msgid "Only First"
 msgstr ""
 
@@ -108,7 +108,7 @@ msgstr ""
 msgid "Print Extensions"
 msgstr "Распечатать список внутренних номеров"
 
-#: views/view.extensions.header.php:51
+#: views/view.extensions.header.php:48
 msgid "Print Header in Page"
 msgstr ""
 
@@ -116,15 +116,15 @@ msgstr ""
 msgid "Reports"
 msgstr "Отчеты"
 
-#: views/view.extensions.header.php:109 views/view.extensions.header.php:113
+#: views/view.extensions.header.php:107 views/view.extensions.header.php:109
 msgid "Save Settings"
 msgstr ""
 
-#: views/view.extensions.header.php:12
+#: views/view.extensions.header.php:11
 msgid "Select Groups to Print"
 msgstr ""
 
-#: views/view.extensions.header.php:117 views/view.extensions.header.php:121
+#: views/view.extensions.header.php:111 views/view.extensions.header.php:113
 msgid "Set Default Settings"
 msgstr ""
 
@@ -136,7 +136,7 @@ msgstr ""
 msgid "Successful Update"
 msgstr ""
 
-#: views/view.extensions.header.php:45
+#: views/view.extensions.header.php:41
 msgid "Title"
 msgstr ""
 
@@ -208,8 +208,8 @@ msgstr "Пользователи"
 #~ "редакции. Также при выставлении критериев поиска можно использовать "
 #~ "регулярные выражения. В общем случае критерий запроса при помощи "
 #~ "регулярных выражений должен содержать данные между '^' и '$', где "
-#~ "допускаются различные свободные формы. Например, поиск по критерию 20\\d"
-#~ "\\d найдёт все внутренние Caller IDа 20ХХ. Результатом поиска будет "
+#~ "допускаются различные свободные формы. Например, поиск по критерию "
+#~ "20\\d\\d найдёт все внутренние Caller IDа 20ХХ. Результатом поиска будет "
 #~ "список внутренних номеров, каждый из которых будет иметь линк на сруницу "
 #~ "редактирования настроек этого номера, а также линк на страницу этого же "
 #~ "результата, оптимизированную для принтера."

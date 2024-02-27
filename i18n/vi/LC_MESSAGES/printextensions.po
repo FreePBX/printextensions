@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-12 11:26+0000\n"
+"POT-Creation-Date: 2024-02-27 04:49-0500\n"
 "PO-Revision-Date: 2017-07-11 16:47+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/"
@@ -31,7 +31,7 @@ msgstr ""
 msgid "%s Extensions"
 msgstr ""
 
-#: views/view.extensions.header.php:57
+#: views/view.extensions.header.php:54
 msgid "All"
 msgstr ""
 
@@ -51,7 +51,7 @@ msgstr ""
 "Tạo một danh sách các số máy nhánh có thể in được thông qua hệ thống từ tất "
 "cả các mô đun cung cấp số có thể gọi nội bộ"
 
-#: views/view.extensions.header.php:67
+#: views/view.extensions.header.php:66
 msgid "Date Format"
 msgstr ""
 
@@ -59,11 +59,11 @@ msgstr ""
 msgid "Date Print Alignment"
 msgstr ""
 
-#: views/view.extensions.header.php:2 views/view.extensions.header.php:29
+#: views/view.extensions.header.php:2 views/view.extensions.header.php:28
 msgid "Download PDF"
 msgstr "Tải PDF"
 
-#: Printextensions.class.php:381 views/view.extensions.list.php:14
+#: Printextensions.class.php:381 views/view.extensions.list.php:21
 msgid "Empty"
 msgstr ""
 
@@ -71,11 +71,11 @@ msgstr ""
 msgid "Extension"
 msgstr "Máy nhánh"
 
-#: views/view.extensions.header.php:64
+#: views/view.extensions.header.php:62
 msgid "Footer"
 msgstr ""
 
-#: views/view.extensions.header.php:42
+#: views/view.extensions.header.php:37
 msgid "Header"
 msgstr ""
 
@@ -83,11 +83,11 @@ msgstr ""
 msgid "Missing data!"
 msgstr ""
 
-#: views/view.extensions.header.php:34
+#: views/view.extensions.header.php:31
 msgid "More Options"
 msgstr ""
 
-#: views/view.extensions.header.php:55
+#: views/view.extensions.header.php:52
 msgid "Only First"
 msgstr ""
 
@@ -110,7 +110,7 @@ msgstr ""
 msgid "Print Extensions"
 msgstr "In các máy nhánh"
 
-#: views/view.extensions.header.php:51
+#: views/view.extensions.header.php:48
 msgid "Print Header in Page"
 msgstr ""
 
@@ -118,15 +118,15 @@ msgstr ""
 msgid "Reports"
 msgstr "Các báo cáo"
 
-#: views/view.extensions.header.php:109 views/view.extensions.header.php:113
+#: views/view.extensions.header.php:107 views/view.extensions.header.php:109
 msgid "Save Settings"
 msgstr ""
 
-#: views/view.extensions.header.php:12
+#: views/view.extensions.header.php:11
 msgid "Select Groups to Print"
 msgstr ""
 
-#: views/view.extensions.header.php:117 views/view.extensions.header.php:121
+#: views/view.extensions.header.php:111 views/view.extensions.header.php:113
 msgid "Set Default Settings"
 msgstr ""
 
@@ -138,7 +138,7 @@ msgstr ""
 msgid "Successful Update"
 msgstr ""
 
-#: views/view.extensions.header.php:45
+#: views/view.extensions.header.php:41
 msgid "Title"
 msgstr ""
 

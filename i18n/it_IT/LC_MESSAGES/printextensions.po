@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-12 11:26+0000\n"
+"POT-Creation-Date: 2024-02-27 04:49-0500\n"
 "PO-Revision-Date: 2018-05-30 10:02+0000\n"
 "Last-Translator: Stell0 <stefano.fancello@nethesis.it>\n"
 "Language-Team: Italian <http://*/projects/freepbx/printextensions/it/>\n"
@@ -30,7 +30,7 @@ msgstr ""
 msgid "%s Extensions"
 msgstr ""
 
-#: views/view.extensions.header.php:57
+#: views/view.extensions.header.php:54
 msgid "All"
 msgstr ""
 
@@ -50,7 +50,7 @@ msgstr ""
 "Crea un elenco stampabile di numeri di interno utilizzati in tutto il "
 "sistema da tutti i moduli che forniscono un numero callable interno"
 
-#: views/view.extensions.header.php:67
+#: views/view.extensions.header.php:66
 msgid "Date Format"
 msgstr ""
 
@@ -58,11 +58,11 @@ msgstr ""
 msgid "Date Print Alignment"
 msgstr ""
 
-#: views/view.extensions.header.php:2 views/view.extensions.header.php:29
+#: views/view.extensions.header.php:2 views/view.extensions.header.php:28
 msgid "Download PDF"
 msgstr "Scarica il pdf"
 
-#: Printextensions.class.php:381 views/view.extensions.list.php:14
+#: Printextensions.class.php:381 views/view.extensions.list.php:21
 msgid "Empty"
 msgstr ""
 
@@ -70,11 +70,11 @@ msgstr ""
 msgid "Extension"
 msgstr "Interno"
 
-#: views/view.extensions.header.php:64
+#: views/view.extensions.header.php:62
 msgid "Footer"
 msgstr ""
 
-#: views/view.extensions.header.php:42
+#: views/view.extensions.header.php:37
 msgid "Header"
 msgstr ""
 
@@ -82,11 +82,11 @@ msgstr ""
 msgid "Missing data!"
 msgstr ""
 
-#: views/view.extensions.header.php:34
+#: views/view.extensions.header.php:31
 msgid "More Options"
 msgstr ""
 
-#: views/view.extensions.header.php:55
+#: views/view.extensions.header.php:52
 msgid "Only First"
 msgstr ""
 
@@ -109,7 +109,7 @@ msgstr ""
 msgid "Print Extensions"
 msgstr "Stampa Interni"
 
-#: views/view.extensions.header.php:51
+#: views/view.extensions.header.php:48
 msgid "Print Header in Page"
 msgstr ""
 
@@ -117,15 +117,15 @@ msgstr ""
 msgid "Reports"
 msgstr "Rapporti"
 
-#: views/view.extensions.header.php:109 views/view.extensions.header.php:113
+#: views/view.extensions.header.php:107 views/view.extensions.header.php:109
 msgid "Save Settings"
 msgstr ""
 
-#: views/view.extensions.header.php:12
+#: views/view.extensions.header.php:11
 msgid "Select Groups to Print"
 msgstr ""
 
-#: views/view.extensions.header.php:117 views/view.extensions.header.php:121
+#: views/view.extensions.header.php:111 views/view.extensions.header.php:113
 msgid "Set Default Settings"
 msgstr ""
 
@@ -137,7 +137,7 @@ msgstr ""
 msgid "Successful Update"
 msgstr ""
 
-#: views/view.extensions.header.php:45
+#: views/view.extensions.header.php:41
 msgid "Title"
 msgstr ""
 

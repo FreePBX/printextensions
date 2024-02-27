@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-12 11:26+0000\n"
+"POT-Creation-Date: 2024-02-27 04:49-0500\n"
 "PO-Revision-Date: 2015-07-30 09:15+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://weblate.freepbx.org/projects/freepbx/"
@@ -59,7 +59,7 @@ msgstr ""
 msgid "%s Extensions"
 msgstr ""
 
-#: views/view.extensions.header.php:57
+#: views/view.extensions.header.php:54
 msgid "All"
 msgstr ""
 
@@ -79,7 +79,7 @@ msgstr ""
 "内部の呼び出し番号を提供するすべてのモジュールからシステム全体で使用される内"
 "線番号の印刷可能なリストを作成"
 
-#: views/view.extensions.header.php:67
+#: views/view.extensions.header.php:66
 msgid "Date Format"
 msgstr ""
 
@@ -87,11 +87,11 @@ msgstr ""
 msgid "Date Print Alignment"
 msgstr ""
 
-#: views/view.extensions.header.php:2 views/view.extensions.header.php:29
+#: views/view.extensions.header.php:2 views/view.extensions.header.php:28
 msgid "Download PDF"
 msgstr ""
 
-#: Printextensions.class.php:381 views/view.extensions.list.php:14
+#: Printextensions.class.php:381 views/view.extensions.list.php:21
 msgid "Empty"
 msgstr ""
 
@@ -99,11 +99,11 @@ msgstr ""
 msgid "Extension"
 msgstr "内線"
 
-#: views/view.extensions.header.php:64
+#: views/view.extensions.header.php:62
 msgid "Footer"
 msgstr ""
 
-#: views/view.extensions.header.php:42
+#: views/view.extensions.header.php:37
 msgid "Header"
 msgstr ""
 
@@ -111,11 +111,11 @@ msgstr ""
 msgid "Missing data!"
 msgstr ""
 
-#: views/view.extensions.header.php:34
+#: views/view.extensions.header.php:31
 msgid "More Options"
 msgstr ""
 
-#: views/view.extensions.header.php:55
+#: views/view.extensions.header.php:52
 msgid "Only First"
 msgstr ""
 
@@ -138,7 +138,7 @@ msgstr ""
 msgid "Print Extensions"
 msgstr "内線を一覧表示する"
 
-#: views/view.extensions.header.php:51
+#: views/view.extensions.header.php:48
 msgid "Print Header in Page"
 msgstr ""
 
@@ -146,15 +146,15 @@ msgstr ""
 msgid "Reports"
 msgstr "レポート"
 
-#: views/view.extensions.header.php:109 views/view.extensions.header.php:113
+#: views/view.extensions.header.php:107 views/view.extensions.header.php:109
 msgid "Save Settings"
 msgstr ""
 
-#: views/view.extensions.header.php:12
+#: views/view.extensions.header.php:11
 msgid "Select Groups to Print"
 msgstr ""
 
-#: views/view.extensions.header.php:117 views/view.extensions.header.php:121
+#: views/view.extensions.header.php:111 views/view.extensions.header.php:113
 msgid "Set Default Settings"
 msgstr ""
 
@@ -166,7 +166,7 @@ msgstr ""
 msgid "Successful Update"
 msgstr ""
 
-#: views/view.extensions.header.php:45
+#: views/view.extensions.header.php:41
 msgid "Title"
 msgstr ""
 
