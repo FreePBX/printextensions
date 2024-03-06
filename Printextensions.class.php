@@ -378,7 +378,7 @@ class Printextensions extends \FreePBX_Helpers implements \BMO {
 			$pdf->SetFont('','', 12);
 			if (count($v['items']) == 0)
 			{
-				$pdf->WriteTextUTF8(_("Empty"), '' , 'B', '', 9);
+				$pdf->WriteTextUTF8(_("Empty"), 12 , 'B', '', 9);
 			}
 			else
 			{
