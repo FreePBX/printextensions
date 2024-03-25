@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX printextensions\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-27 04:49-0500\n"
+"POT-Creation-Date: 2024-03-25 01:53-0400\n"
 "PO-Revision-Date: 2008-10-12 15:07+0100\n"
 "Last-Translator: Mikael Carlsson <mickecamino@gmail.com>\n"
 "Language-Team: \n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Poedit-Language: Swedish\n"
 "X-Poedit-Country: SWEDEN\n"
 
-#: PDF.php:145
+#: PDF.php:147
 #, php-format
 msgid "%s - Page %s/%s"
 msgstr ""
@@ -86,7 +86,7 @@ msgstr ""
 msgid "Only First"
 msgstr ""
 
-#: PDF.php:154
+#: PDF.php:156
 #, php-format
 msgid "Page %s/%s"
 msgstr ""

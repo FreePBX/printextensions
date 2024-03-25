@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-27 04:49-0500\n"
+"POT-Creation-Date: 2024-03-25 01:53-0400\n"
 "PO-Revision-Date: 2023-11-19 01:16+0000\n"
 "Last-Translator: Szymon Wysokinski <szymon.wysokinski@sqspolska.pl>\n"
 "Language-Team: Polish <http://weblate.freepbx.org/projects/freepbx/"
@@ -22,7 +22,7 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 3.0.1\n"
 
-#: PDF.php:145
+#: PDF.php:147
 #, php-format
 msgid "%s - Page %s/%s"
 msgstr ""
@@ -92,7 +92,7 @@ msgstr ""
 msgid "Only First"
 msgstr ""
 
-#: PDF.php:154
+#: PDF.php:156
 #, php-format
 msgid "Page %s/%s"
 msgstr ""
