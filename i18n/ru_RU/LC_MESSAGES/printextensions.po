@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-27 04:49-0500\n"
+"POT-Creation-Date: 2024-03-25 01:53-0400\n"
 "PO-Revision-Date: 2021-12-08 06:04+0000\n"
 "Last-Translator: Dmitriy Q <krotesk@ya.ru>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/"
@@ -19,7 +19,7 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 3.0.1\n"
 
-#: PDF.php:145
+#: PDF.php:147
 #, php-format
 msgid "%s - Page %s/%s"
 msgstr ""
@@ -89,7 +89,7 @@ msgstr ""
 msgid "Only First"
 msgstr ""
 
-#: PDF.php:154
+#: PDF.php:156
 #, php-format
 msgid "Page %s/%s"
 msgstr ""

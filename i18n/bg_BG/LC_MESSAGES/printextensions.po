@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX v2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-27 04:49-0500\n"
+"POT-Creation-Date: 2024-03-25 01:53-0400\n"
 "PO-Revision-Date: 2018-07-04 07:17+0000\n"
 "Last-Translator: Chavdar Shtiliyanov <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://*/projects/freepbx/printextensions/bg/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "X-Poedit-Country: BULGARIA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: PDF.php:145
+#: PDF.php:147
 #, php-format
 msgid "%s - Page %s/%s"
 msgstr ""
@@ -91,7 +91,7 @@ msgstr ""
 msgid "Only First"
 msgstr ""
 
-#: PDF.php:154
+#: PDF.php:156
 #, php-format
 msgid "Page %s/%s"
 msgstr ""
