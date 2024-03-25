@@ -128,7 +128,9 @@ class PDF extends \FPDF
 		
 		global $amp_conf;
 		// $this->Image($amp_conf['BRAND_IMAGE_TANGO_LEFT'], 10, 8, 22);
-		$this->Image($amp_conf['BRAND_IMAGE_FREEPBX_FOOT'], 5, 8, 50);
+		if (!empty($amp_conf['BRAND_IMAGE_FREEPBX_FOOT'])) {
+			$this->Image($amp_conf['BRAND_IMAGE_FREEPBX_FOOT'], 5, 8, 50);
+		}
 		
 		$this->SetFont('Arial','B', 22);
 		$this->Cell(0,10, $this->title,0,0,'R');
