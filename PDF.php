@@ -217,8 +217,29 @@ class PDF extends \FPDF
 	}
 
 	function fix_utf8($txt) {
-		$txt = iconv('UTF-8', 'ISO-8859-1',  $txt);
-		return $txt;
+		// Handle empty or non-string input
+		if (empty($txt) || !is_string($txt)) {
+			return '';
+		}
+
+		// First, convert common problematic UTF-8 characters to ASCII equivalents
+		$txt = str_replace(
+			array(chr(226).chr(128).chr(156), chr(226).chr(128).chr(157), chr(226).chr(128).chr(152), chr(226).chr(128).chr(153), chr(226).chr(128).chr(147), chr(226).chr(128).chr(148)),
+			array('"', '"', "'", "'", '-', '-'),
+			$txt
+		);
+
+		// Try conversion with //TRANSLIT to preserve similar characters
+		$converted = @iconv('UTF-8', 'ISO-8859-1//TRANSLIT', $txt);
+		
+		// If iconv still fails, use fallback method
+		if ($converted === false || $converted === null) {
+			// Fallback: Remove remaining non-ASCII characters
+			$converted = preg_replace('/[^\x00-\x7F]/', '', $txt);
+			$converted = iconv('UTF-8', 'ISO-8859-1', $converted);
+		}
+
+		return $converted;
 	}
 
 }
