@@ -2,7 +2,7 @@
   <rawname>printextensions</rawname>
   <repo>standard</repo>
   <name>Print Extensions</name>
-  <version>16.0.8</version>
+  <version>16.0.9</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -13,6 +13,7 @@
     <printextensions>Print Extensions</printextensions>
   </menuitems>
 	<changelog>
+		*16.0.9* FREEI-2201 Fixing UTF-8 encoding issues in PDF text conversion 
 		*16.0.8* FREEPBX-23683 
 		*16.0.7* FREEPBX-23566 
 		*16.0.6* FREEPBX-23612 fix problem printing footer, problem with positions 
