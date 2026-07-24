@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-25 01:53-0400\n"
+"POT-Creation-Date: 2026-07-24 00:17-0400\n"
 "PO-Revision-Date: 2016-10-01 11:39+0200\n"
 "Last-Translator: Maxim <maxim@ua.fm>\n"
 "Language-Team: Ukrainian <http://weblate.freepbx.org/projects/freepbx/"
@@ -27,7 +27,7 @@ msgstr ""
 msgid "%s - Page %s/%s"
 msgstr ""
 
-#: Printextensions.class.php:53 Printextensions.class.php:158
+#: Printextensions.class.php:50 Printextensions.class.php:156
 #, php-format
 msgid "%s Extensions"
 msgstr ""
@@ -40,7 +40,7 @@ msgstr ""
 msgid "All Selected"
 msgstr ""
 
-#: Printextensions.class.php:149
+#: Printextensions.class.php:147
 msgid "Command not found!"
 msgstr ""
 
@@ -62,11 +62,11 @@ msgstr ""
 msgid "Download PDF"
 msgstr "Завантажити PDF"
 
-#: Printextensions.class.php:381 views/view.extensions.list.php:21
+#: Printextensions.class.php:379 views/view.extensions.list.php:21
 msgid "Empty"
 msgstr ""
 
-#: Printextensions.class.php:286
+#: Printextensions.class.php:284
 msgid "Extension"
 msgstr "Додатковий номер"
 
@@ -78,7 +78,7 @@ msgstr ""
 msgid "Header"
 msgstr ""
 
-#: Printextensions.class.php:122
+#: Printextensions.class.php:120
 msgid "Missing data!"
 msgstr ""
 
@@ -95,7 +95,7 @@ msgstr ""
 msgid "Page %s/%s"
 msgstr ""
 
-#: Printextensions.class.php:58
+#: Printextensions.class.php:55
 #, php-format
 msgid "Page Not Found (%s)!!!!"
 msgstr ""
@@ -133,7 +133,7 @@ msgstr ""
 msgid "Skip, not selected data!"
 msgstr ""
 
-#: Printextensions.class.php:128 Printextensions.class.php:140
+#: Printextensions.class.php:126 Printextensions.class.php:138
 msgid "Successful Update"
 msgstr ""
 
@@ -141,15 +141,15 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: Printextensions.class.php:132 Printextensions.class.php:144
+#: Printextensions.class.php:130 Printextensions.class.php:142
 msgid "Update process failed!"
 msgstr ""
 
-#: Printextensions.class.php:285
+#: Printextensions.class.php:283
 msgid "User"
 msgstr "Користувач"
 
-#: Printextensions.class.php:284
+#: Printextensions.class.php:282
 msgid "Users"
 msgstr "Користувачі"
 

@@ -2,7 +2,7 @@
   <rawname>printextensions</rawname>
   <repo>standard</repo>
   <name>Print Extensions</name>
-  <version>17.0.1.3</version>
+  <version>17.0.1.4</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -13,6 +13,7 @@
     <printextensions>Print Extensions</printextensions>
   </menuitems>
 	<changelog>
+		*17.0.1.4* #1061  Print Extensions Use Branding 
 		*17.0.1.2* FREEI-2201 Fixing UTF-8 encoding issues in PDF text conversion 
 		*17.0.1.1* 17.0.1.1
 	</changelog>
