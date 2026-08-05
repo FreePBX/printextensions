@@ -93,10 +93,11 @@ class Printextensions extends \FreePBX_Helpers implements \BMO {
 
 					$names = explode(",", $_REQUEST['names']);
 					$pdf = $this->generatePdf($names);
-$brand = (string)($this->FreePBX->Config->get('DASHBOARD_FREEPBX_BRAND') ?? 'freepbx');
-$slug = preg_replace('/[^a-z0-9]+/i', '-', strtolower(trim($brand)));
-$slug = trim($slug, '-');
-$filename = ($slug !== '' ? $slug : 'freepbx') . '-extensions.pdf';
+					$brand = (string)($this->FreePBX->Config->get('DASHBOARD_FREEPBX_BRAND') ?? 'freepbx');
+					$slug = preg_replace('/[^a-z0-9]+/i', '-', strtolower(trim($brand)));
+					$slug = trim($slug, '-');
+					$filename = ($slug !== '' ? $slug : 'freepbx') . '-extensions.pdf';
+					$pdf->Output('I', $filename, true);	//Open Pdf
 				}
 				exit();
 			break;
