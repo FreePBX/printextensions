@@ -28,12 +28,12 @@
                                         <button type="button" class="btn btn-success" title="<?php echo _("Download PDF"); ?>" id="btnPrintPdf">
                                             <span><i class="fa fa-file-pdf-o"></i></span>
                                         </button>
-                                        <button type="button" class="btn btn-default dropdown-toggle" id="dropdownMenuMoreOptions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="<?php echo _("More Options"); ?>">
+                                        <button type="button" class="btn btn-default dropdown-toggle" id="dropdownMenuMoreOptions" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false" title="<?php echo _("More Options"); ?>">
                                             <span><i class="fa fa-cogs" aria-hidden="true"></i></span>
                                             <span class="caret"></span>
                                         </button>
                                         
-                                        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuMoreOptions">
+                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuMoreOptions">
                                             <li><b><?php echo _("Header") ?></b></li>
                                             <li>
                                                 <div class="input-group">
@@ -104,11 +104,13 @@
                                             </li>
                                             <li class="dropdown-divider"></li>
                                             <li>
-                                                <button type="button" class="btn btn-success btn-block" title="<?php echo _("Save Settings"); ?>" id="btn_save_settings">
+                                                <button type="button" class="btn btn-success" title="<?php echo _("Save Settings"); ?>" id="btn_save_settings">
                                                     <span><i class="fa fa-floppy-o"></i></span>
                                                     <?php echo _("Save Settings") ?>
                                                 </button>
-                                                <button type="button" class="btn btn-danger btn-block" title="<?php echo _("Set Default Settings"); ?>" id="btn_set_default_settings">
+                                            </li>
+                                            <li>
+                                                <button type="button" class="btn btn-danger" title="<?php echo _("Set Default Settings"); ?>" id="btn_set_default_settings">
                                                     <span><i class="fa fa-undo"></i></span>
                                                     <?php echo _("Set Default Settings") ?>
                                                 </button>

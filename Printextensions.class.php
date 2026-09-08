@@ -1,12 +1,5 @@
 <?php
 namespace FreePBX\modules;
-/*
- * Class stub for BMO Module class
- * In _Construct you may remove the database line if you don't use it
- * In getActionbar change "modulename" to the display value for the page
- * In getActionbar change extdisplay to align with whatever variable you use to decide if the page is in edit mode.
- *
- */
 
 use FreePBX_Helpers;
 use BMO;
@@ -15,6 +8,10 @@ include __DIR__ . '/vendor/autoload.php';
 require('PDF.php');
 
 class Printextensions extends \FreePBX_Helpers implements \BMO {
+	public $FreePBX;
+	public $content;
+	public $hooks;
+
 	public function __construct($freepbx = null) {
 		if ($freepbx == null) {
 			throw new Exception("Not given a FreePBX Object");
@@ -97,8 +94,11 @@ class Printextensions extends \FreePBX_Helpers implements \BMO {
 					$names = explode(",", $_REQUEST['names']);
 					$pdf = $this->generatePdf($names);
 					
-					$pdf->Output('I','freepbx-extensions.pdf', true);	//Open Pdf
-					//$pdf->Output('D','freepbx-extensions.pdf', true); //Force Download
+					$brand = (string)($this->FreePBX->Config->get('DASHBOARD_FREEPBX_BRAND') ?? 'freepbx');
+					$slug = preg_replace('/[^a-z0-9]+/i', '-', strtolower(trim($brand)));
+					$slug = trim($slug, '-');
+					$filename = ($slug !== '' ? $slug : 'freepbx') . '-extensions.pdf';
+					$pdf->Output('I', $filename, true);     //Open Pdf
 				}
 				exit();
 			break;

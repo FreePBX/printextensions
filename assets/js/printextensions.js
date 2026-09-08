@@ -71,7 +71,11 @@ $(document).ready(function() {
     });
 
     $('#btn_save_settings').on("click", settings_update);
-    $('#btn_set_default_settings').on("click", settings_set_default);    
+    $('#btn_set_default_settings').on("click", settings_set_default);
+    // Keep the settings panel open while using the form (Bootstrap 5 closes on any click)
+    $('.box-more-options .dropdown-menu').on('click', function(e) {
+        e.stopPropagation();
+    });
 });
 
 function settings_update(e) {
@@ -95,8 +99,17 @@ function settings_update(e) {
 	.done(function(data)
 	{
 		fpbxToast(data.message, '', (data.status ? 'success' : 'error') );
-        document.getElementById('dropdownMenuMoreOptions').click();
+		if (data.status) {
+			printExtensionsCloseSettings();
+		}
 	});
+}
+
+function printExtensionsCloseSettings() {
+	var toggle = document.getElementById('dropdownMenuMoreOptions');
+	if (toggle && typeof bootstrap !== "undefined" && bootstrap.Dropdown) {
+		bootstrap.Dropdown.getOrCreateInstance(toggle).hide();
+	}
 }
 
 function settings_set_default(e) {
