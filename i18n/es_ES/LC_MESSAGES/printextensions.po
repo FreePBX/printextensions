@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: FreePBX - módulo printextensions module spanish "
 "translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-25 01:53-0400\n"
+"POT-Creation-Date: 2026-10-06 07:20-0400\n"
 "PO-Revision-Date: 2016-12-10 21:46+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "%s - Page %s/%s"
 msgstr ""
 
-#: Printextensions.class.php:53 Printextensions.class.php:158
+#: Printextensions.class.php:50 Printextensions.class.php:158
 #, php-format
 msgid "%s Extensions"
 msgstr ""
@@ -93,7 +93,7 @@ msgstr ""
 msgid "Page %s/%s"
 msgstr ""
 
-#: Printextensions.class.php:58
+#: Printextensions.class.php:55
 #, php-format
 msgid "Page Not Found (%s)!!!!"
 msgstr ""
@@ -123,7 +123,7 @@ msgstr ""
 msgid "Select Groups to Print"
 msgstr ""
 
-#: views/view.extensions.header.php:111 views/view.extensions.header.php:113
+#: views/view.extensions.header.php:113 views/view.extensions.header.php:115
 msgid "Set Default Settings"
 msgstr ""
 

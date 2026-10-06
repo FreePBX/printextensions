@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-25 01:53-0400\n"
+"POT-Creation-Date: 2026-10-06 07:20-0400\n"
 "PO-Revision-Date: 2009-02-01 12:49+0800\n"
 "Last-Translator: 周征晟 <zhougongjizhe@163.com>\n"
 "Language-Team: EdwardBadBoy <zhougongjizhe@163.com>\n"
@@ -24,7 +24,7 @@ msgstr ""
 msgid "%s - Page %s/%s"
 msgstr ""
 
-#: Printextensions.class.php:53 Printextensions.class.php:158
+#: Printextensions.class.php:50 Printextensions.class.php:158
 #, php-format
 msgid "%s Extensions"
 msgstr ""
@@ -92,7 +92,7 @@ msgstr ""
 msgid "Page %s/%s"
 msgstr ""
 
-#: Printextensions.class.php:58
+#: Printextensions.class.php:55
 #, php-format
 msgid "Page Not Found (%s)!!!!"
 msgstr ""
@@ -122,7 +122,7 @@ msgstr ""
 msgid "Select Groups to Print"
 msgstr ""
 
-#: views/view.extensions.header.php:111 views/view.extensions.header.php:113
+#: views/view.extensions.header.php:113 views/view.extensions.header.php:115
 msgid "Set Default Settings"
 msgstr ""
 

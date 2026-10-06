@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-25 01:53-0400\n"
+"POT-Creation-Date: 2026-10-06 07:20-0400\n"
 "PO-Revision-Date: 2018-06-26 13:58+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/printextensions/de/>\n"
@@ -25,7 +25,7 @@ msgstr ""
 msgid "%s - Page %s/%s"
 msgstr ""
 
-#: Printextensions.class.php:53 Printextensions.class.php:158
+#: Printextensions.class.php:50 Printextensions.class.php:158
 #, php-format
 msgid "%s Extensions"
 msgstr ""
@@ -95,7 +95,7 @@ msgstr ""
 msgid "Page %s/%s"
 msgstr ""
 
-#: Printextensions.class.php:58
+#: Printextensions.class.php:55
 #, php-format
 msgid "Page Not Found (%s)!!!!"
 msgstr ""
@@ -125,7 +125,7 @@ msgstr ""
 msgid "Select Groups to Print"
 msgstr ""
 
-#: views/view.extensions.header.php:111 views/view.extensions.header.php:113
+#: views/view.extensions.header.php:113 views/view.extensions.header.php:115
 msgid "Set Default Settings"
 msgstr ""
 
